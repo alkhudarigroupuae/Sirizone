@@ -6,14 +6,15 @@ import RelatedProduct from "@/components/product/RelatedProduct";
 import FooterOne from "@/components/footer/FooterOne";
 import Product from "@/data/Product.json";
 import { useParams } from 'next/navigation';
+import Form from 'react-bootstrap/Form';
 
 export default function Home() {
 
-  const [selectedSize, setSelectedSize] = useState("01 Miter");
-  const [selectedWeight, setSelectedWeight] = useState("5 kg");
+    const [selectedSize, setSelectedSize] = useState("01 Miter");
+    const [selectedWeight, setSelectedWeight] = useState("5 kg");
 
-  const sizeOptions = ["01 Miter", "1 miter", "2 miter", "3 miter", "5 miter"];
-  const weightOptions = ["5 kg", "5kg", "7kg", "10kg", "15kg"];
+    const sizeOptions = ["01 Miter", "1 miter", "2 miter", "3 miter", "5 miter"];
+    const weightOptions = ["5 kg", "5kg", "7kg", "10kg", "15kg"];
 
 
 
@@ -151,56 +152,34 @@ export default function Home() {
                                                         <span className="old-price ml--15">$69.35</span>
                                                     </span>
                                                     <div className="variable-product-type mb--15">
-      {/* Size Select */}
-      <div className="single-select">
-        <span className="label">Size</span>
-        <div className="nice-select" tabIndex={0}>
-          <span className="current">{selectedSize}</span>
-          <ul className="list">
-            {sizeOptions.map((size) => (
-              <li
-                key={size}
-                data-value={size}
-                className={`option ${
-                  selectedSize === size ? "selected focus" : ""
-                }`}
-                onClick={() => setSelectedSize(size)}
-              >
-                {size}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+                                                        {/* Size Select */}
+                                                        <div className="single-select">
+                                                            <span className="label">Size</span>
+                                                             <Form.Select aria-label="01 Miter">
+                                                                <option>01 Miter</option>
+                                                                <option value="1">03 Miter</option>
+                                                                <option value="2">02 Miter</option>
+                                                                <option value="3">05 Miter</option>
+                                                            </Form.Select>
+                                                        </div>
+                                                        {/* Size Select */}
+                                                        <div className="single-select">
+                                                            <span className="label">Weight</span>
+                                                             <Form.Select aria-label="01 Kg">
+                                                                <option>01 Kg</option>
+                                                                <option value="1">02 Kg</option>
+                                                                <option value="2">03Kg</option>
+                                                                <option value="3">04 Kg</option>
+                                                            </Form.Select>
+                                                        </div>
 
-      {/* Weight Select */}
-      <div className="single-select">
-        <span className="label">Weight</span>
-        <div className="nice-select" tabIndex={0}>
-          <span className="current">{selectedWeight}</span>
-          <ul className="list">
-            {weightOptions.map((weight) => (
-              <li
-                key={weight}
-                data-value={weight}
-                className={`option ${
-                  selectedWeight === weight ? "selected focus" : ""
-                }`}
-                onClick={() => setSelectedWeight(weight)}
-              >
-                {weight}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
+                                                    </div>
                                                     <div className="product-bottom-action">
                                                         <a
                                                             href="#"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
-                                                            <div className="btn-text">Buy On Amazon</div>
+                                                            <div className="btn-text">Add To Cart</div>
                                                             <div className="arrow-icon">
                                                                 <i className="fa-regular fa-cart-shopping" />
                                                             </div>

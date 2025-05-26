@@ -27,7 +27,7 @@ const CompareElements = () => {
     const addcart = () => toast('Successfully Add To Cart!');
 
     if (compareItems.length === 0) {
-        return <div className="modal-body">No products to compare.</div>;
+        return <div className="modal-body no-compare-show">No products to compare.</div>;
     }
 
     return (

@@ -109,10 +109,7 @@ export default function Home() {
                                                             <option data-display="Subject*">All Categories</option>
                                                             <option value={1}>Some option</option>
                                                             <option value={2}>Another option</option>
-                                                            <option value={3} disabled>
-                                                                A disabled option
-                                                            </option>
-                                                            <option value={4}>Potato</option>
+                                                            <option value={3}>Potato</option>
                                                         </select>
                                                     </div>
                                                     <textarea

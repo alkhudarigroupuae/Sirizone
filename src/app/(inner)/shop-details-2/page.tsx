@@ -152,7 +152,7 @@ export default function Home() {
                               href="#"
                               className="rts-btn btn-primary radious-sm with-icon"
                             >
-                              <div className="btn-text">Buy On Amazon</div>
+                              <div className="btn-text">Add To Cart</div>
                               <div className="arrow-icon">
                                 <i className="fa-regular fa-cart-shopping" />
                               </div>

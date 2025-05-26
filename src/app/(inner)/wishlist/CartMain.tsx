@@ -52,19 +52,19 @@ const CartMain = () => {
 
 
 
-    // add to cart to page
-    const { addToCart } = useCart();
-    const handleAdd = (item: any) => {
-        addToCart({
-            id: Date.now(),
-            image: item.image,
-            title: item.name ?? 'Default Product Title',
-            price: parseFloat(item.price ?? '0'),
-            quantity: 1,
-            active: true,
-        });
-    };
-    const addcart = () => toast('Successfully Add To Cart!');
+  // add to cart to page
+  const { addToCart } = useCart();
+  const handleAdd = (item: any) => {
+    addToCart({
+      id: Date.now(),
+      image: item.image,
+      title: item.name ?? 'Default Product Title',
+      price: parseFloat(item.price ?? '0'),
+      quantity: 1,
+      active: true,
+    });
+  };
+  const addcart = () => toast('Successfully Add To Cart!');
 
 
   return (
@@ -134,11 +134,11 @@ const CartMain = () => {
                   <div className="subtotal"><p>${(item.price * item.quantity).toFixed(2)}</p></div>
                   <div className="button-area">
                     <a href="#" className="rts-btn btn-primary radious-sm with-icon"
-                     onClick={e => {
-                                        e.preventDefault();
-                                        handleAdd(item);
-                                        addcart();
-                                    }}
+                      onClick={e => {
+                        e.preventDefault();
+                        handleAdd(item);
+                        addcart();
+                      }}
 
                     >
                       <div className="btn-text">Add to Cart</div>

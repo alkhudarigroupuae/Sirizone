@@ -18429,6 +18429,7 @@ li.with-megamenu:hover .rts-megamenu {
   overflow: hidden;
   display: block;
   position: relative;
+  max-width: 236px;
 }
 
 .single-shopping-card-one .thumbnail-preview .badge {
@@ -28740,3 +28741,27 @@ ul.submenu.mm-collapse.mm-show {
 .shop-page .header-top-area .bwtween-area-header-top .countdown{
   display: none;
 }
+
+.variable-product-type .single-select select{
+  height: 45px;
+  weight: 45px;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.no-compare-show{
+  color: var(--color-danger);
+  font-size: 24px;
+}
+
+form.contact-form-1 .single-select select {
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid #E2E2E2;
+    background: #fff;
+    padding: 15px;
+}
+
+

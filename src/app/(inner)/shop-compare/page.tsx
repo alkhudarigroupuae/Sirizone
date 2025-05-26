@@ -38,9 +38,6 @@ export default function Home() {
                             <div className="modal-compare-area-start">
                                 <div className="compare-title-area">
                                     <h1 className="title">Products Compare</h1>
-                                    <span>
-                                        There are <span>3</span> products to compare
-                                    </span>
                                 </div>
                                 <div className="modal-dialogs">
                                     <div className="modal-content">

@@ -152,7 +152,7 @@ const CompareElements: React.FC = () => {
                                 handleAdd();
                               }}
                             >
-                              <div className="btn-text">Buy Now</div>
+                              <div className="btn-text">Add to Cart</div>
                               <div className="arrow-icon"><i className="fa-regular fa-cart-shopping" /></div>
                               <div className="arrow-icon"><i className="fa-regular fa-cart-shopping" /></div>
                             </a>
