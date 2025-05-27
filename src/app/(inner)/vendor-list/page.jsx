@@ -7,7 +7,7 @@ import FooterOne from "@/components/footer/FooterOne";
 
 export default function Home() {
 
-    const [activeTab, setActiveTab] = useState ('tab1');
+    const [activeTab, setActiveTab] = useState('tab1');
 
 
 
@@ -24,7 +24,7 @@ export default function Home() {
                                 <div className="navigator-breadcrumb-wrapper">
                                     <a href="/">Home</a>
                                     <i className="fa-regular fa-chevron-right" />
-                                    <a className="current" href="#">
+                                    <a className="current" href="/shop">
                                         Vendor Grid
                                     </a>
                                 </div>
@@ -49,7 +49,7 @@ export default function Home() {
                                             type="text"
                                             placeholder="Search vendors (by name or ID)..."
                                         />
-                                        <a href="#" className="rts-btn btn-primary radious-sm with-icon">
+                                        <a href="/shop" className="rts-btn btn-primary radious-sm with-icon">
                                             <div className="btn-text">Search</div>
                                             <div className="arrow-icon">
                                                 <i className="fa-light fa-magnifying-glass" />
@@ -101,7 +101,7 @@ export default function Home() {
                                                         <button
                                                             onClick={() => setActiveTab('tab2')}
                                                             className={`nav-link single-button ${activeTab === 'tab2' ? 'active' : ''}`}
-                                                            >
+                                                        >
                                                             <svg
                                                                 width={16}
                                                                 height={16}
@@ -196,340 +196,13 @@ export default function Home() {
                                 </div>
                                 <div className="tab-content mt--20" id="myTabContent">
                                     {activeTab === 'tab2' &&
-                                    <div>
-                                        <div className="row g-4">
-                                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/01.svg" alt="vendor" />
-                                                    </div>
-                                                    <h3 className="title">
-                                                        Fresh Iuice Bar <span className="closed">Closed</span>
-                                                    </h3>
-                                                    <div className="stars-area">
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <span>4.50 out of 5</span>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-regular fa-location-dot" />
-                                                        <p>
-                                                            530 Post Ct El Dorado Hills California ,United States
-                                                        </p>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-solid fa-phone-volume" />
-                                                        <p>+1 (511) 934-8170</p>
-                                                    </div>
-                                                    <a
-                                                        href="vendor-details.html"
-                                                        className="rts-btn btn-primary radious-sm with-icon"
-                                                    >
-                                                        <div className="btn-text">Visit Store</div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
+                                        <div>
+                                            <div className="row g-4">
+                                                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/01.svg" alt="vendor" />
                                                         </div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/02.svg" alt="vendor" />
-                                                    </div>
-                                                    <h3 className="title">
-                                                        Food Character <span className="open">Open</span>
-                                                    </h3>
-                                                    <div className="stars-area">
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <span>4.50 out of 5</span>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-regular fa-location-dot" />
-                                                        <p>
-                                                            530 Post Ct El Dorado Hills California ,United States
-                                                        </p>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-solid fa-phone-volume" />
-                                                        <p>+1 (511) 934-8170</p>
-                                                    </div>
-                                                    <a
-                                                        href="vendor-details.html"
-                                                        className="rts-btn btn-primary radious-sm with-icon"
-                                                    >
-                                                        <div className="btn-text">Visit Store</div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/03.svg" alt="vendor" />
-                                                    </div>
-                                                    <h3 className="title">
-                                                        Food Forulard <span className="open">Open</span>
-                                                    </h3>
-                                                    <div className="stars-area">
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <span>4.50 out of 5</span>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-regular fa-location-dot" />
-                                                        <p>
-                                                            530 Post Ct El Dorado Hills California ,United States
-                                                        </p>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-solid fa-phone-volume" />
-                                                        <p>+1 (511) 934-8170</p>
-                                                    </div>
-                                                    <a
-                                                        href="vendor-details.html"
-                                                        className="rts-btn btn-primary radious-sm with-icon"
-                                                    >
-                                                        <div className="btn-text">Visit Store</div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/04.svg" alt="vendor" />
-                                                    </div>
-                                                    <h3 className="title">
-                                                        Authentic Grocery <span className="closed">Closed</span>
-                                                    </h3>
-                                                    <div className="stars-area">
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <span>4.50 out of 5</span>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-regular fa-location-dot" />
-                                                        <p>
-                                                            530 Post Ct El Dorado Hills California ,United States
-                                                        </p>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-solid fa-phone-volume" />
-                                                        <p>+1 (511) 934-8170</p>
-                                                    </div>
-                                                    <a
-                                                        href="vendor-details.html"
-                                                        className="rts-btn btn-primary radious-sm with-icon"
-                                                    >
-                                                        <div className="btn-text">Visit Store</div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/05.svg" alt="vendor" />
-                                                    </div>
-                                                    <h3 className="title">
-                                                        Fresh Food<span className="open">Open</span>
-                                                    </h3>
-                                                    <div className="stars-area">
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <span>4.50 out of 5</span>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-regular fa-location-dot" />
-                                                        <p>
-                                                            530 Post Ct El Dorado Hills California ,United States
-                                                        </p>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-solid fa-phone-volume" />
-                                                        <p>+1 (511) 934-8170</p>
-                                                    </div>
-                                                    <a
-                                                        href="vendor-details.html"
-                                                        className="rts-btn btn-primary radious-sm with-icon"
-                                                    >
-                                                        <div className="btn-text">Visit Store</div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/06.svg" alt="vendor" />
-                                                    </div>
-                                                    <h3 className="title">
-                                                        Food Forulard <span className="open">Open</span>
-                                                    </h3>
-                                                    <div className="stars-area">
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <span>4.50 out of 5</span>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-regular fa-location-dot" />
-                                                        <p>
-                                                            530 Post Ct El Dorado Hills California ,United States
-                                                        </p>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-solid fa-phone-volume" />
-                                                        <p>+1 (511) 934-8170</p>
-                                                    </div>
-                                                    <a
-                                                        href="vendor-details.html"
-                                                        className="rts-btn btn-primary radious-sm with-icon"
-                                                    >
-                                                        <div className="btn-text">Visit Store</div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/07.svg" alt="vendor" />
-                                                    </div>
-                                                    <h3 className="title">
-                                                        Food Forulard <span className="open">Open</span>
-                                                    </h3>
-                                                    <div className="stars-area">
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <span>4.50 out of 5</span>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-regular fa-location-dot" />
-                                                        <p>
-                                                            530 Post Ct El Dorado Hills California ,United States
-                                                        </p>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-solid fa-phone-volume" />
-                                                        <p>+1 (511) 934-8170</p>
-                                                    </div>
-                                                    <a
-                                                        href="vendor-details.html"
-                                                        className="rts-btn btn-primary radious-sm with-icon"
-                                                    >
-                                                        <div className="btn-text">Visit Store</div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/08.svg" alt="vendor" />
-                                                    </div>
-                                                    <h3 className="title">
-                                                        Botanic Natural Product<span className="open">open</span>
-                                                    </h3>
-                                                    <div className="stars-area">
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <i className="fa-solid fa-star" />
-                                                        <span>4.50 out of 5</span>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-regular fa-location-dot" />
-                                                        <p>
-                                                            530 Post Ct El Dorado Hills California ,United States
-                                                        </p>
-                                                    </div>
-                                                    <div className="location">
-                                                        <i className="fa-solid fa-phone-volume" />
-                                                        <p>+1 (511) 934-8170</p>
-                                                    </div>
-                                                    <a
-                                                        href="vendor-details.html"
-                                                        className="rts-btn btn-primary radious-sm with-icon"
-                                                    >
-                                                        <div className="btn-text">Visit Store</div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                        <div className="arrow-icon">
-                                                            <i className="fa-light fa-arrow-right" />
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    }
-                                    {activeTab === 'tab1' &&
-                                    <div>
-                                        <div className="row g-4">
-                                            <div className="col-lg-6">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/01.svg" alt="vendor" />
-                                                    </div>
-                                                    <div className="inner">
                                                         <h3 className="title">
                                                             Fresh Iuice Bar <span className="closed">Closed</span>
                                                         </h3>
@@ -552,7 +225,7 @@ export default function Home() {
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
                                                         <a
-                                                            href="vendor-details.html"
+                                                            href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
                                                             <div className="btn-text">Visit Store</div>
@@ -565,13 +238,11 @@ export default function Home() {
                                                         </a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/02.svg" alt="vendor" />
-                                                    </div>
-                                                    <div className="inner">
+                                                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/02.svg" alt="vendor" />
+                                                        </div>
                                                         <h3 className="title">
                                                             Food Character <span className="open">Open</span>
                                                         </h3>
@@ -594,7 +265,7 @@ export default function Home() {
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
                                                         <a
-                                                            href="vendor-details.html"
+                                                            href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
                                                             <div className="btn-text">Visit Store</div>
@@ -607,13 +278,11 @@ export default function Home() {
                                                         </a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/03.svg" alt="vendor" />
-                                                    </div>
-                                                    <div className="inner">
+                                                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/03.svg" alt="vendor" />
+                                                        </div>
                                                         <h3 className="title">
                                                             Food Forulard <span className="open">Open</span>
                                                         </h3>
@@ -636,7 +305,7 @@ export default function Home() {
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
                                                         <a
-                                                            href="vendor-details.html"
+                                                            href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
                                                             <div className="btn-text">Visit Store</div>
@@ -649,13 +318,11 @@ export default function Home() {
                                                         </a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/04.svg" alt="vendor" />
-                                                    </div>
-                                                    <div className="inner">
+                                                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/04.svg" alt="vendor" />
+                                                        </div>
                                                         <h3 className="title">
                                                             Authentic Grocery <span className="closed">Closed</span>
                                                         </h3>
@@ -678,7 +345,7 @@ export default function Home() {
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
                                                         <a
-                                                            href="vendor-details.html"
+                                                            href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
                                                             <div className="btn-text">Visit Store</div>
@@ -691,13 +358,11 @@ export default function Home() {
                                                         </a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/05.svg" alt="vendor" />
-                                                    </div>
-                                                    <div className="inner">
+                                                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/05.svg" alt="vendor" />
+                                                        </div>
                                                         <h3 className="title">
                                                             Fresh Food<span className="open">Open</span>
                                                         </h3>
@@ -720,7 +385,7 @@ export default function Home() {
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
                                                         <a
-                                                            href="vendor-details.html"
+                                                            href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
                                                             <div className="btn-text">Visit Store</div>
@@ -733,13 +398,11 @@ export default function Home() {
                                                         </a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/06.svg" alt="vendor" />
-                                                    </div>
-                                                    <div className="inner">
+                                                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/06.svg" alt="vendor" />
+                                                        </div>
                                                         <h3 className="title">
                                                             Food Forulard <span className="open">Open</span>
                                                         </h3>
@@ -762,7 +425,7 @@ export default function Home() {
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
                                                         <a
-                                                            href="vendor-details.html"
+                                                            href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
                                                             <div className="btn-text">Visit Store</div>
@@ -775,13 +438,11 @@ export default function Home() {
                                                         </a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/07.svg" alt="vendor" />
-                                                    </div>
-                                                    <div className="inner">
+                                                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/07.svg" alt="vendor" />
+                                                        </div>
                                                         <h3 className="title">
                                                             Food Forulard <span className="open">Open</span>
                                                         </h3>
@@ -804,7 +465,7 @@ export default function Home() {
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
                                                         <a
-                                                            href="vendor-details.html"
+                                                            href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
                                                             <div className="btn-text">Visit Store</div>
@@ -817,16 +478,13 @@ export default function Home() {
                                                         </a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="single-vendor-area">
-                                                    <div className="logo-vendor">
-                                                        <img src="assets/images/vendor/08.svg" alt="vendor" />
-                                                    </div>
-                                                    <div className="inner">
+                                                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/08.svg" alt="vendor" />
+                                                        </div>
                                                         <h3 className="title">
-                                                            Botanic Natural Product
-                                                            <span className="open">open</span>
+                                                            Botanic Natural Product<span className="open">open</span>
                                                         </h3>
                                                         <div className="stars-area">
                                                             <i className="fa-solid fa-star" />
@@ -847,7 +505,7 @@ export default function Home() {
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
                                                         <a
-                                                            href="vendor-details.html"
+                                                            href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
                                                             <div className="btn-text">Visit Store</div>
@@ -862,7 +520,349 @@ export default function Home() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    }
+                                    {activeTab === 'tab1' &&
+                                        <div>
+                                            <div className="row g-4">
+                                                <div className="col-lg-6">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/01.svg" alt="vendor" />
+                                                        </div>
+                                                        <div className="inner">
+                                                            <h3 className="title">
+                                                                Fresh Iuice Bar <span className="closed">Closed</span>
+                                                            </h3>
+                                                            <div className="stars-area">
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <span>4.50 out of 5</span>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-regular fa-location-dot" />
+                                                                <p>
+                                                                    530 Post Ct El Dorado Hills California ,United States
+                                                                </p>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-solid fa-phone-volume" />
+                                                                <p>+1 (511) 934-8170</p>
+                                                            </div>
+                                                            <a
+                                                                href="/shop"
+                                                                className="rts-btn btn-primary radious-sm with-icon"
+                                                            >
+                                                                <div className="btn-text">Visit Store</div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/02.svg" alt="vendor" />
+                                                        </div>
+                                                        <div className="inner">
+                                                            <h3 className="title">
+                                                                Food Character <span className="open">Open</span>
+                                                            </h3>
+                                                            <div className="stars-area">
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <span>4.50 out of 5</span>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-regular fa-location-dot" />
+                                                                <p>
+                                                                    530 Post Ct El Dorado Hills California ,United States
+                                                                </p>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-solid fa-phone-volume" />
+                                                                <p>+1 (511) 934-8170</p>
+                                                            </div>
+                                                            <a
+                                                                href="/shop"
+                                                                className="rts-btn btn-primary radious-sm with-icon"
+                                                            >
+                                                                <div className="btn-text">Visit Store</div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/03.svg" alt="vendor" />
+                                                        </div>
+                                                        <div className="inner">
+                                                            <h3 className="title">
+                                                                Food Forulard <span className="open">Open</span>
+                                                            </h3>
+                                                            <div className="stars-area">
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <span>4.50 out of 5</span>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-regular fa-location-dot" />
+                                                                <p>
+                                                                    530 Post Ct El Dorado Hills California ,United States
+                                                                </p>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-solid fa-phone-volume" />
+                                                                <p>+1 (511) 934-8170</p>
+                                                            </div>
+                                                            <a
+                                                                href="/shop"
+                                                                className="rts-btn btn-primary radious-sm with-icon"
+                                                            >
+                                                                <div className="btn-text">Visit Store</div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/04.svg" alt="vendor" />
+                                                        </div>
+                                                        <div className="inner">
+                                                            <h3 className="title">
+                                                                Authentic Grocery <span className="closed">Closed</span>
+                                                            </h3>
+                                                            <div className="stars-area">
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <span>4.50 out of 5</span>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-regular fa-location-dot" />
+                                                                <p>
+                                                                    530 Post Ct El Dorado Hills California ,United States
+                                                                </p>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-solid fa-phone-volume" />
+                                                                <p>+1 (511) 934-8170</p>
+                                                            </div>
+                                                            <a
+                                                                href="/shop"
+                                                                className="rts-btn btn-primary radious-sm with-icon"
+                                                            >
+                                                                <div className="btn-text">Visit Store</div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/05.svg" alt="vendor" />
+                                                        </div>
+                                                        <div className="inner">
+                                                            <h3 className="title">
+                                                                Fresh Food<span className="open">Open</span>
+                                                            </h3>
+                                                            <div className="stars-area">
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <span>4.50 out of 5</span>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-regular fa-location-dot" />
+                                                                <p>
+                                                                    530 Post Ct El Dorado Hills California ,United States
+                                                                </p>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-solid fa-phone-volume" />
+                                                                <p>+1 (511) 934-8170</p>
+                                                            </div>
+                                                            <a
+                                                                href="/shop"
+                                                                className="rts-btn btn-primary radious-sm with-icon"
+                                                            >
+                                                                <div className="btn-text">Visit Store</div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/06.svg" alt="vendor" />
+                                                        </div>
+                                                        <div className="inner">
+                                                            <h3 className="title">
+                                                                Food Forulard <span className="open">Open</span>
+                                                            </h3>
+                                                            <div className="stars-area">
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <span>4.50 out of 5</span>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-regular fa-location-dot" />
+                                                                <p>
+                                                                    530 Post Ct El Dorado Hills California ,United States
+                                                                </p>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-solid fa-phone-volume" />
+                                                                <p>+1 (511) 934-8170</p>
+                                                            </div>
+                                                            <a
+                                                                href="/shop"
+                                                                className="rts-btn btn-primary radious-sm with-icon"
+                                                            >
+                                                                <div className="btn-text">Visit Store</div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/07.svg" alt="vendor" />
+                                                        </div>
+                                                        <div className="inner">
+                                                            <h3 className="title">
+                                                                Food Forulard <span className="open">Open</span>
+                                                            </h3>
+                                                            <div className="stars-area">
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <span>4.50 out of 5</span>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-regular fa-location-dot" />
+                                                                <p>
+                                                                    530 Post Ct El Dorado Hills California ,United States
+                                                                </p>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-solid fa-phone-volume" />
+                                                                <p>+1 (511) 934-8170</p>
+                                                            </div>
+                                                            <a
+                                                                href="/shop"
+                                                                className="rts-btn btn-primary radious-sm with-icon"
+                                                            >
+                                                                <div className="btn-text">Visit Store</div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                    <div className="single-vendor-area">
+                                                        <div className="logo-vendor">
+                                                            <img src="assets/images/vendor/08.svg" alt="vendor" />
+                                                        </div>
+                                                        <div className="inner">
+                                                            <h3 className="title">
+                                                                Botanic Natural Product
+                                                                <span className="open">open</span>
+                                                            </h3>
+                                                            <div className="stars-area">
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <i className="fa-solid fa-star" />
+                                                                <span>4.50 out of 5</span>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-regular fa-location-dot" />
+                                                                <p>
+                                                                    530 Post Ct El Dorado Hills California ,United States
+                                                                </p>
+                                                            </div>
+                                                            <div className="location">
+                                                                <i className="fa-solid fa-phone-volume" />
+                                                                <p>+1 (511) 934-8170</p>
+                                                            </div>
+                                                            <a
+                                                                href="/shop"
+                                                                className="rts-btn btn-primary radious-sm with-icon"
+                                                            >
+                                                                <div className="btn-text">Visit Store</div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                                <div className="arrow-icon">
+                                                                    <i className="fa-light fa-arrow-right" />
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     }
                                 </div>
                             </div>

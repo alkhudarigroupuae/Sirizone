@@ -111,6 +111,7 @@ export default function Home() {
   const categorySlugs = new Set(productsByCategory.map(p => p.slug));
   const brandSlugs = new Set(productsByBrand.map(p => p.slug));
 
+  // Only keep products that exist in both sets if both filters applied
   let combinedFilteredProducts = [];
 
   if (selectedCategories.length > 0 && selectedBrands.length > 0) {
@@ -146,7 +147,11 @@ export default function Home() {
   // Handle price filter form submit to prevent page reload
   const handlePriceFilterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Just filtering happens dynamically because state changes already filter products
+    // No extra action needed here
   };
+
+
 
 
 

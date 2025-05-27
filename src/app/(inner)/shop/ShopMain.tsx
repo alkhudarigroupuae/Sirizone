@@ -116,7 +116,7 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
 
 
     const compare = () => toast('Successfully Add To Compare !');
-  const addcart = () => toast('Successfully Add To Cart !');
+    const addcart = () => toast('Successfully Add To Cart !');
     const wishList = () => toast('Successfully Add To Wishlist !');
     return (
         <>
@@ -130,15 +130,15 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                 </a>
                 <div className="action-share-option">
                     <span className="single-action openuptip message-show-action" data-flow="up" title="Add To Wishlist"
-                     onClick={() => {
+                        onClick={() => {
                             handleWishlist();
                             wishList();
                         }}
                     >
                         <i className="fa-light fa-heart" />
                     </span>
-                    <span className="single-action openuptip" data-flow="up" title="Compare" 
-                           onClick={() => {
+                    <span className="single-action openuptip" data-flow="up" title="Compare"
+                        onClick={() => {
                             handleCompare();
                             compare();
                         }}

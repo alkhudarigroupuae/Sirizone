@@ -285,7 +285,7 @@ function NavItem() {
                                     className="sub-b"
                                     href="/blog-list-left-sidebar"
                                 >
-                                     Blog List Left Sidebar
+                                    Blog List Left Sidebar
                                 </a>
                             </li>
                             <li>
@@ -293,7 +293,7 @@ function NavItem() {
                                     className="sub-b"
                                     href="/blog-list-right-sidebar"
                                 >
-                                   
+
                                     Blog List Right Sidebar
                                 </a>
                             </li>
