@@ -1,6 +1,6 @@
 "use client";
 import HeaderOne from "@/components/header/HeaderOne";
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import ShopMain from "./ShopMain";
 import ShopMainList from "./ShopMainList";
 import Product from '@/data/Product.json';
@@ -17,29 +17,26 @@ interface PostType {
   price?: string;
 }
 
-export default function Home() {
+// Create a separate component for the content that uses useSearchParams
+function ShopContent() {
   const [activeTab, setActiveTab] = useState<string>('tab2');
   const searchParams = useSearchParams();
   const searchQuery = searchParams.get('search')?.toLowerCase() || '';
 
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [selectedBrands, setSelectedBrands] = useState<string[]>([]);  // <-- new state for brands
-
-  // New state for price filter
+  const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [minPrice, setMinPrice] = useState<number>(0);
   const [maxPrice, setMaxPrice] = useState<number>(150);
 
   const allCategories = ["Beverages", "Biscuits & Snacks", "Breads & Bakery"];
   const allBrands = ["Frito Lay", "Nespresso", "Oreo", "Quaker", "Welch's"];
 
-  // Category -> product indices
   const categoryProductIndices: { [key: string]: number[] } = {
     "Beverages": [1, 3, 4, 5, 6, 7],
     "Biscuits & Snacks": [8, 9, 10, 12, 16],
     "Breads & Bakery": [15, 1, 2, 3],
   };
 
-  // Brand -> product indices
   const brandProductIndices: { [key: string]: number[] } = {
     "Frito Lay": [1, 3, 4],
     "Nespresso": [3, 1, 4],
@@ -64,17 +61,16 @@ export default function Home() {
     );
   };
 
-  // Price inputs handlers
   const handleMinPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = parseFloat(e.target.value);
     if (!isNaN(val)) setMinPrice(val);
   };
+
   const handleMaxPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = parseFloat(e.target.value);
     if (!isNaN(val)) setMaxPrice(val);
   };
 
-  // Filter products by selected categories
   const getFilteredByCategoryProducts = (): PostType[] => {
     if (selectedCategories.length === 0) {
       const allIndices = Object.values(categoryProductIndices).flat();
@@ -89,10 +85,8 @@ export default function Home() {
     return uniqueSelectedIndices.map(i => Product[i]).filter(Boolean);
   };
 
-  // Filter products by selected brands
   const getFilteredByBrandProducts = (): PostType[] => {
     if (selectedBrands.length === 0) {
-      // No brand filter, return all products from Product.json
       return Product;
     }
 
@@ -103,15 +97,12 @@ export default function Home() {
     return uniqueSelectedIndices.map(i => Product[i]).filter(Boolean);
   };
 
-  // Combine category and brand filters (intersection)
   const productsByCategory = getFilteredByCategoryProducts();
   const productsByBrand = getFilteredByBrandProducts();
 
-  // Intersection by slug (or index) of category and brand filtered products
   const categorySlugs = new Set(productsByCategory.map(p => p.slug));
   const brandSlugs = new Set(productsByBrand.map(p => p.slug));
 
-  // Only keep products that exist in both sets if both filters applied
   let combinedFilteredProducts = [];
 
   if (selectedCategories.length > 0 && selectedBrands.length > 0) {
@@ -121,7 +112,6 @@ export default function Home() {
   } else if (selectedBrands.length > 0) {
     combinedFilteredProducts = productsByBrand;
   } else {
-    // If no filters, show all products (unique combined category indices to be consistent)
     const allIndices = Object.values(categoryProductIndices).flat();
     const uniqueIndices = Array.from(new Set(allIndices));
     combinedFilteredProducts = uniqueIndices.map(i => Product[i]).filter(Boolean);
@@ -129,36 +119,23 @@ export default function Home() {
 
   const filteredProducts: PostType[] = combinedFilteredProducts
     .filter(product => {
-      // Price convert string to number, jodi na paoa jai tahole 0 dhore neben
       const productPrice = product.price ? parseFloat(product.price) : 0;
-
-      // Price filter apply
       if (productPrice < minPrice || productPrice > maxPrice) {
         return false;
       }
 
-      // Search filter
       if (!searchQuery) return true;
       const title = product.title?.toLowerCase() || '';
       const category = product.category?.toLowerCase() || '';
       return title.includes(searchQuery) || category.includes(searchQuery);
     });
 
-  // Handle price filter form submit to prevent page reload
   const handlePriceFilterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Just filtering happens dynamically because state changes already filter products
-    // No extra action needed here
   };
-
-
-
-
 
   return (
     <div className="shop-page">
-      <HeaderOne />
-
       {/* Breadcrumb */}
       <div className="rts-navigation-area-breadcrumb bg_light-1">
         <div className="container">
@@ -183,11 +160,9 @@ export default function Home() {
       <div className="shop-grid-sidebar-area rts-section-gap">
         <div className="container">
           <div className="row g-0">
-
             {/* Sidebar */}
             <div className="col-xl-3 col-lg-12 pr--70 pr_lg--10 pr_sm--10 pr_md--5 rts-sticky-column-item">
               <div className="sidebar-filter-main theiaStickySidebar">
-
                 {/* Price Filter */}
                 <div className="single-filter-box">
                   <h5 className="title">Widget Price Filter</h5>
@@ -239,7 +214,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Categories (Interactive) */}
+                {/* Categories */}
                 <div className="single-filter-box">
                   <h5 className="title">Product Categories</h5>
                   <div className="filterbox-body">
@@ -258,7 +233,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
 
                 {/* Brands */}
                 <div className="single-filter-box">
@@ -321,9 +295,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
-
-
               </div>
 
               {/* Grid or List view */}
@@ -382,7 +353,17 @@ export default function Home() {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
 
+export default function Home() {
+  return (
+    <div>
+      <HeaderOne />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ShopContent />
+      </Suspense>
       <FooterOne />
     </div>
   );

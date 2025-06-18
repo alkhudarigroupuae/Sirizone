@@ -118,7 +118,6 @@ const WeeklyBestSelling: React.FC = () => {
                                                 </div>
                                             ))}
                                         </div>
-
                                     </div>}
                                 {activeTab === 'tab2' && <div>
                                     <div className="row g-4">
@@ -141,7 +140,6 @@ const WeeklyBestSelling: React.FC = () => {
                                 </div>}
                                 {activeTab === 'tab3' && <div>
                                     <div className="row g-4">
-
                                         {postsSection3.map((post: PostType, index: number) => (
                                             <div
                                                 key={index}
@@ -157,7 +155,6 @@ const WeeklyBestSelling: React.FC = () => {
                                                 </div>
                                             </div>
                                         ))}
-
                                     </div>
                                 </div>}
                                 {activeTab === 'tab4' && <div>

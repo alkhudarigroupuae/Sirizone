@@ -225,7 +225,7 @@ function HeaderOne() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="logo-search-category-wrapper">
-                                    <a href="index.html" className="logo-area">
+                                    <a href="/" className="logo-area">
                                         <img
                                             src="/assets/images/logo/logo-01.svg"
                                             alt="logo-main"

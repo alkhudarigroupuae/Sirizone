@@ -214,6 +214,12 @@ function NavItem() {
                         </a>
                         <ul className="submenu">
                             <li>
+                                <a className="sub-b" href="/dashboard">
+                                    Dashboard
+                                    <span className="badge">( New )</span>
+                                </a>
+                            </li>
+                            <li>
                                 <a className="sub-b" href="/about">
                                     About
                                 </a>
@@ -303,6 +309,12 @@ function NavItem() {
                                 </a>
                             </li>
                         </ul>
+                    </li>
+                    <li className="parent">
+                        <a href="/dashboard">
+                            Dashboard
+                            <span className="badge">New</span>
+                        </a>
                     </li>
                     <li className="parent">
                         <a href="/contact">Contact</a>
