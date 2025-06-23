@@ -222,11 +222,6 @@ const ReviewsTable = () => {
       cell: (row) => (
         <div className="between-stock-table action text-end">
           <a href="#" className="rts-btn btn-primary">Details</a>
-          <Image src="/assets/images-dashboard/grocery/20.png" alt="" width={20} height={20} />
-          <div className="action-edit-deleate">
-            <span>Edit</span>
-            <span>Delete</span>
-          </div>
         </div>
       ),
       ignoreRowClick: true,

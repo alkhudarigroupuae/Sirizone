@@ -8,6 +8,7 @@ const AddProductPage = () => {
     productName: '',
     regularPrice: '',
     salePrice: '',
+    productSize: '',
     stock: '',
     sku: '',
     category: '',
@@ -114,6 +115,22 @@ const AddProductPage = () => {
                     onChange={handleInputChange}
                   />
                 </div>
+                <div className="single-input">
+                  <label htmlFor="size">Add Size</label>
+                  {/* <input
+                    type="text"
+                    id="size"
+                    placeholder="Small"
+                    value={formData.productSize}
+                    onChange={handleInputChange}
+                  /> */}
+                  <select className="nice-select size">
+                    <option>Small</option>
+                    <option>Large</option>
+                    <option>XL Size</option>
+                    <option>XXL Size</option>
+                  </select>
+                </div>
 
                 <div className="single-input">
                   <label htmlFor="stock">Stock</label>
@@ -191,8 +208,7 @@ const AddProductPage = () => {
                             accept="image/*"
                             onChange={handleImageChange}
                           />
-                          <label htmlFor="rts_images1" className="rts-btn btn-primary">
-                            Upload Image
+                          <label htmlFor="rts_images1" className="rts-btn btn-primary opacity-none">
                           </label>
                         </div>
                       </div>

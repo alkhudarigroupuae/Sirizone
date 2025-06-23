@@ -30,13 +30,16 @@ const menuItems: MenuItem[] = [
   {
     title: "Product",
     icon: "/assets/images-dashboard/icons/02.svg",
-    children: [{ title: "Product List", href: "/dashboard/product-list" }],
+    children: [
+      { title: "Product List", href: "/dashboard/product-list" },
+      { title: "Add Product", href: "/dashboard/add-product" },
+    ],
+    // children: [{ title: "Add Product", href: "/dashboard/add-product" }],
   },
-  {
-    title: "Add Product",
-    icon: "/assets/images-dashboard/icons/03.svg",
-    children: [{ title: "Add Product", href: "/dashboard/add-product" }],
-  },
+  // {
+  //   title: "Add Product",
+  //   icon: "/assets/images-dashboard/icons/03.svg",
+  // },
   {
     title: "Vendor",
     icon: "/assets/images-dashboard/icons/04.svg",
@@ -44,6 +47,7 @@ const menuItems: MenuItem[] = [
       { title: "Vendor Grid", href: "/dashboard/vendor-grid" },
       { title: "Vendor List", href: "/dashboard/vendor-list" },
       { title: "Vendor Details", href: "/dashboard/vendor-details" },
+      { title: "Create Vendors", href: "/dashboard/create-vendors" },
     ],
   },
   {
@@ -65,6 +69,7 @@ const menuItems: MenuItem[] = [
     title: "User Profile",
     icon: "/assets/images-dashboard/icons/05.svg",
     children: [
+      { title: "Payment", href: "/dashboard/payment" },
       { title: "Profile Setting", href: "/dashboard/profile-setting" },
       { title: "Log In", href: "/dashboard/log-in" },
       { title: "Registration", href: "/dashboard/registration" },

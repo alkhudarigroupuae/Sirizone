@@ -28824,3 +28824,8 @@ li.has-dropdown .submenu li>a .badge {
     padding: 23px 5px;
   }
 }
+.nice-select.size{
+  width: 100%;
+  margin-bottom: 30px;
+  height: 62px;
+}

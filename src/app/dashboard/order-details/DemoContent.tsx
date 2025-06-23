@@ -1,8 +1,23 @@
-import React from 'react'
+"use client"
+import React, { useRef } from 'react';
 
-function DemoContent() {
+const DemoContent: React.FC = () => {
+  const printRef = useRef<HTMLDivElement>(null);
+
+  const handlePrint = () => {
+    if (!printRef.current) return;
+
+    const printContents = printRef.current.innerHTML;
+    const originalContents = document.body.innerHTML;
+
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+    window.location.reload(); // reload the page to restore original layout
+  };
+
   return (
-    <div>
+    <div ref={printRef}>
       <div className="body-root-inner">
         <div className="transection">
           <div className="title-right-actioin-btn-wrapper-product-list">
@@ -10,11 +25,11 @@ function DemoContent() {
             <div className="button-wrapper">
               <div className="single-select">
                 <select className="nice-select">
-                                    <option>Week</option>
-                                    <option>Month</option>
-                                    <option>Year</option>
-                                    <option>6 Month</option>
-                                </select>
+                  <option>Week</option>
+                  <option>Month</option>
+                  <option>Year</option>
+                  <option>6 Month</option>
+                </select>
               </div>
             </div>
           </div>
@@ -24,7 +39,7 @@ function DemoContent() {
             </div>
           </div>
           <div className="vendor-list-main-wrapper product-wrapper">
-            {/* customers  details main wrapper */}
+            {/* customers details main wrapper */}
             <div className="customers-details-wrapper-one-dashboard">
               <h4 className="title">Customer Details</h4>
               <div className="main-customers-details-top">
@@ -38,66 +53,33 @@ function DemoContent() {
                 <div className="right-area">
                   <div className="short-contact-info">
                     <p className="name">Email</p>
-                    <a href="#">textgood@gmail.com</a>
+                    <a href="mailto:textgood@gmail.com">textgood@gmail.com</a>
                   </div>
                   <div className="short-contact-info">
                     <p className="name">Number</p>
-                    <a href="#">+880123456678</a>
+                    <a href="tel:+880123456678">+880123456678</a>
                   </div>
                   <div className="short-contact-info">
                     <p className="name">Date</p>
-                    <a href="#">13/16/2024</a>
+                    <span>13/16/2024</span>
                   </div>
                   <div className="short-contact-info">
                     <p className="name">Country</p>
-                    <a href="#">USA(America)</a>
+                    <span>USA(America)</span>
                   </div>
                 </div>
               </div>
             </div>
-            {/* customers  details main wrapper end */}
+            {/* customers details main wrapper end */}
             <div className="billing-address-area-4">
               <h4 className="title">Billing address</h4>
               <div className="main-billing-address-wrapper">
                 <div className="single-billing-address">
                   <p>
-                    <span>Fast Name :</span> Maxlins
+                    <span>First Name :</span> Maxlins
                   </p>
                   <p>
-                    <span>last Name :</span> Maxlins
-                  </p>
-                  <p>
-                    <span>Address :</span> 256 E. Brewer St. Holtsville
-                  </p>
-                </div>
-                <div className="single-billing-address">
-                  <p>
-                    <span>Fast Name :</span> Maxlins
-                  </p>
-                  <p>
-                    <span>last Name :</span> Maxlins
-                  </p>
-                  <p>
-                    <span>Address :</span> 256 E. Brewer St. Holtsville
-                  </p>
-                </div>
-                <div className="single-billing-address">
-                  <p>
-                    <span>Fast Name :</span> Maxlins
-                  </p>
-                  <p>
-                    <span>last Name :</span> Maxlins
-                  </p>
-                  <p>
-                    <span>Address :</span> 256 E. Brewer St. Holtsville
-                  </p>
-                </div>
-                <div className="single-billing-address">
-                  <p>
-                    <span>Fast Name :</span> Maxlins
-                  </p>
-                  <p>
-                    <span>last Name :</span> Maxlins
+                    <span>Last Name :</span> Maxlins
                   </p>
                   <p>
                     <span>Address :</span> 256 E. Brewer St. Holtsville
@@ -110,32 +92,10 @@ function DemoContent() {
               <div className="main-billing-address-wrapper">
                 <div className="single-billing-address">
                   <p>
-                    <span>Fast Name :</span> Maxlins
+                    <span>First Name :</span> Maxlins
                   </p>
                   <p>
-                    <span>last Name :</span> Maxlins
-                  </p>
-                  <p>
-                    <span>Address :</span> 256 E. Brewer St. Holtsville
-                  </p>
-                </div>
-                <div className="single-billing-address">
-                  <p>
-                    <span>Fast Name :</span> Maxlins
-                  </p>
-                  <p>
-                    <span>last Name :</span> Maxlins
-                  </p>
-                  <p>
-                    <span>Address :</span> 256 E. Brewer St. Holtsville
-                  </p>
-                </div>
-                <div className="single-billing-address">
-                  <p>
-                    <span>Fast Name :</span> Maxlins
-                  </p>
-                  <p>
-                    <span>last Name :</span> Maxlins
+                    <span>Last Name :</span> Maxlins
                   </p>
                   <p>
                     <span>Address :</span> 256 E. Brewer St. Holtsville
@@ -146,11 +106,11 @@ function DemoContent() {
           </div>
         </div>
         <div className="order-details-table-1-table table-responsive">
-          <h4 className="title">Order Summery</h4>
-          <table className="table  order-details-table table-responsive">
+          <h4 className="title">Order Summary</h4>
+          <table className="table order-details-table table-responsive">
             <thead className="bg-active">
               <tr>
-                <th style={{ width: 300 }}>Order Item </th>
+                <th style={{ width: 300 }}>Order Item</th>
                 <th className="text-center">Price</th>
                 <th className="text-center">Quantity</th>
                 <th className="text-right">Color</th>
@@ -171,11 +131,11 @@ function DemoContent() {
                     </div>
                   </div>
                 </td>
-                <td className="text-center">$10.99</td>
+                <td className="text-center">$10.00</td>
                 <td className="text-center">1</td>
-                <td className="text-right">$10.99</td>
-                <td className="text-right">$10.99</td>
-                <td className="text-right">$10.99</td>
+                <td className="text-right">Red</td>
+                <td className="text-right">M</td>
+                <td className="text-right">$10.00</td>
               </tr>
               <tr>
                 <td>
@@ -189,50 +149,60 @@ function DemoContent() {
                     </div>
                   </div>
                 </td>
-                <td className="text-center">$10.99</td>
+                <td className="text-center">$10.00</td>
                 <td className="text-center">1</td>
-                <td className="text-right">$10.99</td>
-                <td className="text-right">$10.99</td>
-                <td className="text-right">$10.99</td>
-              </tr>
-              <tr>
-                <td>
-                  <div className="item">
-                    <div className="thumbnail">
-                      <img src="/assets/images-dashboard/grocery/15.png" alt="grocery" />
-                    </div>
-                    <div className="discription">
-                      <h6 className="title">Quaker Oats Healthy Meal...</h6>
-                      <span>Food</span>
-                    </div>
-                  </div>
-                </td>
-                <td className="text-center">$10.99</td>
-                <td className="text-center">1</td>
-                <td className="text-right">$10.99</td>
-                <td className="text-right">$10.99</td>
-                <td className="text-right">$10.99</td>
+                <td className="text-right">Blue</td>
+                <td className="text-right">L</td>
+                <td className="text-right">$10.00</td>
               </tr>
               <tr className="b-n">
                 <td colSpan={5} className="text-end f-w-600">
                   SubTotal
                 </td>
-                <td className="text-right">$1710.99</td>
+                <td className="text-right">$20.00</td>
               </tr>
               <tr className="b-n">
                 <td colSpan={5} className="text-end f-w-600">
                   Tax
                 </td>
-                <td className="text-right">$85.99</td>
+                <td className="text-right">$05.00</td>
               </tr>
               <tr className="b-n">
                 <td colSpan={5} className="text-end f-w-600">
                   Grand Total
                 </td>
-                <td className="text-right f-w-600">$1795.99</td>
+                <td className="text-right f-w-600">$25.00</td>
               </tr>
             </tbody>
           </table>
+          <div className="buttons-area-invoice no-print mb--30">
+            <button
+              className="rts-btn btn-primary radious-sm with-icon"
+              onClick={handlePrint}
+              type="button"
+            >
+              <div className="btn-text">Print Now</div>
+              <div className="arrow-icon">
+                <i className="fa-regular fa-print" />
+              </div>
+              <div className="arrow-icon">
+                <i className="fa-regular fa-print" />
+              </div>
+            </button>
+            <a
+              href="/assets/images/invoice/invoice.pdf"
+              download="invoice.pdf"
+              className="rts-btn btn-primary radious-sm with-icon"
+            >
+              <div className="btn-text">Download</div>
+              <div className="arrow-icon">
+                <i className="fa-thin fa-download" />
+              </div>
+              <div className="arrow-icon">
+                <i className="fa-thin fa-download" />
+              </div>
+            </a>
+          </div>
         </div>
         <div className="footer-copyright">
           <div className="left">
@@ -251,9 +221,8 @@ function DemoContent() {
           </ul>
         </div>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default DemoContent
+export default DemoContent;
