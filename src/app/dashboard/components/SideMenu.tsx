@@ -66,10 +66,14 @@ const menuItems: MenuItem[] = [
     href: "/dashboard/brand",
   },
   {
+    title: "Payment",
+    icon: "/assets/images-dashboard/icons/17.svg",
+    href: "/dashboard/payment",
+  },
+  {
     title: "User Profile",
     icon: "/assets/images-dashboard/icons/05.svg",
     children: [
-      { title: "Payment", href: "/dashboard/payment" },
       { title: "Profile Setting", href: "/dashboard/profile-setting" },
       { title: "Log In", href: "/dashboard/log-in" },
       { title: "Registration", href: "/dashboard/registration" },
