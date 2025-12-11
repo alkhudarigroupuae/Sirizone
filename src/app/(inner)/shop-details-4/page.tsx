@@ -6,6 +6,7 @@ import RelatedProduct from "@/components/product/RelatedProduct";
 import FooterOne from "@/components/footer/FooterOne";
 import Product from "@/data/Product.json";
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -60,7 +61,7 @@ export default function Home() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="navigator-breadcrumb-wrapper">
-                                    <a href="/">Home</a>
+                                    <Link href="/">Home</Link>
                                     <i className="fa-regular fa-chevron-right" />
                                     <a className="current" href="#">
                                         Vendor Details

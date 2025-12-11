@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function BannerFour() {
@@ -21,7 +22,7 @@ function BannerFour() {
                                     </h1>
                                     <p>Don't miss these opportunities...</p>
                                     <div className="rts-btn-banner-area">
-                                        <a href="/shop" className="rts-btn btn-primary radious-sm with-icon">
+                                        <Link href="/shop" className="rts-btn btn-primary radious-sm with-icon">
                                             <div className="btn-text">Shop Now</div>
                                             <div className="arrow-icon">
                                                 <i className="fa-light fa-arrow-right" />
@@ -29,7 +30,7 @@ function BannerFour() {
                                             <div className="arrow-icon">
                                                 <i className="fa-light fa-arrow-right" />
                                             </div>
-                                        </a>
+                                        </Link>
                                         <div className="price-area">
                                             <span>from</span>
                                             <h3 className="title">$80.99</h3>

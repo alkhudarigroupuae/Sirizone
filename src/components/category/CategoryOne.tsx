@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
+import Link from 'next/link';
 
 function CategoryOne() {
     return (
@@ -38,83 +39,83 @@ function CategoryOne() {
                                     >
                                         <SwiperSlide>
                                             <div className="single-category-one">
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <img src="assets/images/category/01.png" alt="category" />
                                                     <p>Organic Vegetable</p>
                                                     <span>299 Items</span>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <div className="single-category-one">
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <img src="assets/images/category/02.png" alt="category" />
                                                     <p>Organic Vegetable</p>
                                                     <span>299 Items</span>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <div className="single-category-one">
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <img src="assets/images/category/03.png" alt="category" />
                                                     <p>Organic Vegetable</p>
                                                     <span>299 Items</span>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <div className="single-category-one">
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <img src="assets/images/category/04.png" alt="category" />
                                                     <p>Organic Vegetable</p>
                                                     <span>299 Items</span>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <div className="single-category-one">
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <img src="assets/images/category/05.png" alt="category" />
                                                     <p>Organic Vegetable</p>
                                                     <span>299 Items</span>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <div className="single-category-one">
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <img src="assets/images/category/06.png" alt="category" />
                                                     <p>Organic Vegetable</p>
                                                     <span>299 Items</span>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <div className="single-category-one">
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <img src="assets/images/category/07.png" alt="category" />
                                                     <p>Organic Vegetable</p>
                                                     <span>299 Items</span>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <div className="single-category-one">
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <img src="assets/images/category/08.png" alt="category" />
                                                     <p>Organic Vegetable</p>
                                                     <span>299 Items</span>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
                                             <div className="single-category-one">
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <img src="assets/images/category/01.png" alt="category" />
                                                     <p>Organic Vegetable</p>
                                                     <span>299 Items</span>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </SwiperSlide>
                                     </Swiper>

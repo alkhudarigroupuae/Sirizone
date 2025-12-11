@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 function BannerFive() {
@@ -20,7 +21,7 @@ function BannerFive() {
                 We have prepared special discounts for you on grocery products.
                 Don't miss these opportunities...
               </p>
-              <a
+              <Link
                 href="/shop"
                 className="rts-btn btn-primary radious-sm with-icon"
               >
@@ -31,21 +32,21 @@ function BannerFive() {
                 <div className="arrow-icon">
                   <i className="fa-light fa-arrow-right" />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
         <div className="col-lg-3">
           <div className="banner-five-right-content bg_image">
             <div className="content-area">
-              <a href="#" className="rts-btn btn-primary">
+              <Link href="#" className="rts-btn btn-primary">
                 Weekend Discount
-              </a>
+              </Link>
               <h3 className="title">
                 Strawberry Water Drinks
                 <span>Flavors Awesome</span>
               </h3>
-              <a
+              <Link
                 href="/shop"
                 className="shop-now-goshop-btn"
               >
@@ -56,7 +57,7 @@ function BannerFive() {
                 <div className="plus-icon">
                   <i className="fa-sharp fa-regular fa-plus" />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

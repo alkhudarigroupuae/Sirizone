@@ -60,16 +60,9 @@ function FeatureProduct() {
         };
     }, []);
 
-
-
-
-
-
     // modal activation
     type ModalType = 'one' | 'two' | 'three' | null;
     const [activeModal, setActiveModal] = useState<ModalType>(null);
-
-
 
     const handleClose = () => setActiveModal(null);
 

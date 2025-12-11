@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import CategoryMenu from './CategoryMenu';
 import MobileMenu from './MobileMenu';
 import { useState } from 'react';
@@ -86,12 +87,12 @@ const Sidebar = () => {
                         </div>
                     </div>
                     <div className="buton-area-bottom">
-                        <a href="/login" className="rts-btn btn-primary">
+                        <Link href="/login" className="rts-btn btn-primary">
                             Sign In
-                        </a>
-                        <a href="/register" className="rts-btn btn-primary">
+                        </Link>
+                        <Link href="/register" className="rts-btn btn-primary">
                             Sign Up
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 {/* button area wrapper end */}

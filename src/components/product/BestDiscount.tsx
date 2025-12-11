@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link'
 import React from 'react'
 
 function BestDiscount() {
@@ -18,12 +19,12 @@ function BestDiscount() {
                                             Drink Booster
                                         </h2>
                                         <p>Just don’t miss the special offer this week</p>
-                                        <a
+                                        <Link
                                             href="/shop"
                                             className="rts-btn btn-primary"
                                         >
                                             Shop Now
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -36,12 +37,12 @@ function BestDiscount() {
                                             Vegetables
                                         </h2>
                                         <p>Just don’t miss the special offer this week</p>
-                                        <a
+                                        <Link
                                             href="/shop"
                                             className="rts-btn btn-primary"
                                         >
                                             Shop Now
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

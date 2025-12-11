@@ -1,4 +1,5 @@
 "use client"
+import { Link } from '@mui/material'
 import React from 'react'
 
 function LessDiscountTwo() {
@@ -23,9 +24,9 @@ function LessDiscountTwo() {
                                         <div className="row g-4">
                                             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                                 <div className="single-shopping-card-one tranding-product with-progress">
-                                                    <a href="/shop" className="thumbnail-preview">
+                                                    <Link href="/shop" className="thumbnail-preview">
                                                         <img src="assets/images/grocery/27.jpg" alt="grocery" />
-                                                    </a>
+                                                    </Link>
                                                     <div className="body-content">
                                                         <div className="top">
                                                             <div className="stars-area">
@@ -36,11 +37,11 @@ function LessDiscountTwo() {
                                                                 <i className="fa-solid fa-star" />
                                                                 <span>(125 Reviews)</span>
                                                             </div>
-                                                            <a href="/shop">
+                                                            <Link href="/shop">
                                                                 <h4 className="title">
                                                                     Pastine Mellin Filid Angelo 100% Di Grano Tenero
                                                                 </h4>
-                                                            </a>
+                                                            </Link>
                                                             <span className="availability">500g Pack</span>
                                                             <div className="price-area">
                                                                 <span className="current">$36.00</span>
@@ -67,9 +68,9 @@ function LessDiscountTwo() {
                                             </div>
                                             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                                 <div className="single-shopping-card-one tranding-product with-progress">
-                                                    <a href="/shop" className="thumbnail-preview">
+                                                    <Link href="/shop" className="thumbnail-preview">
                                                         <img src="assets/images/grocery/28.jpg" alt="grocery" />
-                                                    </a>
+                                                    </Link>
                                                     <div className="body-content">
                                                         <div className="top">
                                                             <div className="stars-area">
@@ -80,11 +81,11 @@ function LessDiscountTwo() {
                                                                 <i className="fa-solid fa-star" />
                                                                 <span>(125 Reviews)</span>
                                                             </div>
-                                                            <a href="/shop">
+                                                            <Link href="/shop">
                                                                 <h4 className="title">
                                                                     Pastine Mellin Filid Angelo 100% Di Grano Tenero
                                                                 </h4>
-                                                            </a>
+                                                            </Link>
                                                             <span className="availability">500g Pack</span>
                                                             <div className="price-area">
                                                                 <span className="current">$36.00</span>
@@ -111,9 +112,9 @@ function LessDiscountTwo() {
                                             </div>
                                             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                                                 <div className="single-shopping-card-one tranding-product with-progress">
-                                                    <a href="/shop" className="thumbnail-preview">
+                                                    <Link href="/shop" className="thumbnail-preview">
                                                         <img src="assets/images/grocery/10.jpg" alt="grocery" />
-                                                    </a>
+                                                    </Link>
                                                     <div className="body-content">
                                                         <div className="top">
                                                             <div className="stars-area">
@@ -124,11 +125,11 @@ function LessDiscountTwo() {
                                                                 <i className="fa-solid fa-star" />
                                                                 <span>(125 Reviews)</span>
                                                             </div>
-                                                            <a href="/shop">
+                                                            <Link href="/shop">
                                                                 <h4 className="title">
                                                                     Pastine Mellin Filid Angelo 100% Di Grano Tenero
                                                                 </h4>
-                                                            </a>
+                                                            </Link>
                                                             <span className="availability">500g Pack</span>
                                                             <div className="price-area">
                                                                 <span className="current">$36.00</span>

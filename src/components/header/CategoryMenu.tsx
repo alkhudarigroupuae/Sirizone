@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState, MouseEvent } from "react";
 
 type MenuItem = {
@@ -73,7 +74,7 @@ function CategoryMenu() {
             <ul className="category-sub-menu" id="category-active-four">
                 {menuItems.map((item, index) => (
                     <li key={index}>
-                        <a
+                        <Link
                             href="#"
                             className="menu-item"
                             onClick={(e: MouseEvent<HTMLAnchorElement>) => {
@@ -89,7 +90,7 @@ function CategoryMenu() {
                                         }`}
                                 />
                             )}
-                        </a>
+                        </Link>
 
                         {item.submenu && (
                             <ul
@@ -98,9 +99,9 @@ function CategoryMenu() {
                             >
                                 {item.submenu.map((subItem, subIdx) => (
                                     <li key={subIdx}>
-                                        <a className="mobile-menu-link" href="/shop">
+                                        <Link className="mobile-menu-link" href="/shop">
                                             {subItem}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>

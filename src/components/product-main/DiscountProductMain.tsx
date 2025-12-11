@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useCart } from "@/components/header/CartContext";
 import { useWishlist } from "@/components/header/WishlistContext";
 import { ToastContainer, toast } from 'react-toastify';
@@ -19,25 +19,37 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
     ProductTitle,
     Price,
 }) => {
+
     const [added, setAdded] = useState(false);
+    const [quantity, setQuantity] = useState(1);
 
     const { addToCart } = useCart();
+    const { addToWishlist } = useWishlist();
 
+    // Increase quantity
+    const increase = () => setQuantity(prev => prev + 1);
+
+    // Decrease quantity
+    const decrease = () =>
+        setQuantity(prev => (prev > 1 ? prev - 1 : 1));
+
+    // Add to cart
     const handleAdd = () => {
         addToCart({
             id: Date.now(),
             image: `/assets/images/grocery/${ProductImage}`,
             title: ProductTitle ?? 'Default Product Title',
             price: parseFloat(Price ?? '0'),
-            quantity: 1,
+            quantity: quantity,
             active: true,
         });
 
         setAdded(true);
-        setTimeout(() => setAdded(false), 5000); // reset after 2 seconds
+        toast('Successfully Add To Cart !');
+        setTimeout(() => setAdded(false), 3000);
     };
 
-    const { addToWishlist } = useWishlist();
+    // Add to wishlist
     const handleWishlist = () => {
         addToWishlist({
             id: Date.now(),
@@ -46,100 +58,75 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
             price: parseFloat(Price ?? '0'),
             quantity: 1,
         });
+
+        toast('Successfully Add To Wishlist !');
     };
-
-    useEffect(() => {
-        const handleQuantityClick = (e: Event) => {
-            const button = e.currentTarget as HTMLElement;
-            const parent = button.closest('.quantity-edit') as HTMLElement | null;
-            if (!parent) return;
-
-            const input = parent.querySelector('.input') as HTMLInputElement | null;
-            const addToCart = parent.querySelector('a.add-to-cart') as HTMLElement | null;
-            if (!input) return;
-
-            let oldValue = parseInt(input.value || '1', 10);
-            let newVal = oldValue;
-
-            if (button.classList.contains('plus')) {
-                newVal = oldValue + 1;
-            } else if (button.classList.contains('minus')) {
-                newVal = oldValue > 1 ? oldValue - 1 : 1;
-            }
-
-            input.value = newVal.toString();
-            if (addToCart) {
-                addToCart.setAttribute('data-quantity', newVal.toString());
-            }
-        };
-
-        const buttons = document.querySelectorAll('.quantity-edit .button');
-
-        buttons.forEach(button => {
-            button.removeEventListener('click', handleQuantityClick);
-            button.addEventListener('click', handleQuantityClick);
-        });
-
-        return () => {
-            buttons.forEach(button => {
-                button.removeEventListener('click', handleQuantityClick);
-            });
-        };
-    }, []);
-
-
-    // tostify
-    const compare = () => toast('Successfully Add To Compare !');
-    const addcart = () => toast('Successfully Add To Cart !');
 
     return (
         <>
-            <a href={`/shop/${Slug}`} className="thumbnail-preview">
+            <Link href={`/shop/${Slug}`} className="thumbnail-preview">
                 <div className="badge">
                     <span>25% <br />Off</span>
                     <i className="fa-solid fa-bookmark" />
                 </div>
                 <img src={`/assets/images/grocery/${ProductImage}`} alt="grocery" />
-            </a>
+            </Link>
+
             <div className="body-content">
-                <a href={`/shop/${Slug}`}>
+                <Link href={`/shop/${Slug}`}>
                     <h4 className="title">{ProductTitle ?? 'How to growing your business'}</h4>
-                </a>
+                </Link>
+
                 <span className="availability">500g Pack</span>
+
                 <div className="price-area">
                     <span className="current">{`$${Price}`}</span>
                     <div className="previous">$36.00</div>
                 </div>
+
                 <div className="cart-counter-action">
+                    {/* Quantity */}
                     <div className="quantity-edit">
-                        <input type="text" className="input" defaultValue={1} />
+                        <input
+                            type="text"
+                            className="input"
+                            value={quantity}
+                            onChange={(e) =>
+                                setQuantity(Number(e.target.value) || 1)
+                            }
+                        />
                         <div className="button-wrapper-action">
-                            <button className="button minus">
+                            <button className="button minus" onClick={decrease}>
                                 <i className="fa-regular fa-chevron-down" />
                             </button>
-                            <button className="button plus">
-                                +<i className="fa-regular fa-chevron-up" />
+
+                            <button className="button plus" onClick={increase}>
+                                <i className="fa-regular fa-chevron-up" />
                             </button>
                         </div>
                     </div>
-                    <a
+
+                    {/* Add to cart */}
+                    <Link
                         href="#"
                         className="rts-btn btn-primary radious-sm with-icon add-to-cart"
                         onClick={e => {
                             e.preventDefault();
                             handleAdd();
-                            addcart();
                         }}
                     >
                         <div className="btn-text">{added ? 'Added' : 'Add'}</div>
+
                         <div className="arrow-icon">
                             <i className={`fa-regular ${added ? 'fa-check' : 'fa-cart-shopping'}`} />
                         </div>
                         <div className="arrow-icon">
                             <i className={`fa-regular ${added ? 'fa-check' : 'fa-cart-shopping'}`} />
                         </div>
-                    </a>
+                    </Link>
                 </div>
+
+                <ToastContainer />
             </div>
         </>
     );

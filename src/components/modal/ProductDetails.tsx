@@ -5,6 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import { useCart } from "@/components/header/CartContext";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Link from "next/link";
 
 interface ModalProps {
   show: boolean;
@@ -133,7 +134,7 @@ const ProductDetails: React.FC<ModalProps> = ({
                       </div>
                     </div>
 
-                    <a
+                    <Link
                       href="#"
                       className="rts-btn btn-primary radious-sm with-icon"
                       onClick={(e) => {
@@ -148,11 +149,11 @@ const ProductDetails: React.FC<ModalProps> = ({
                       <div className="arrow-icon">
                         <i className="fa-regular fa-cart-shopping" />
                       </div>
-                    </a>
+                    </Link>
 
-                    <a href="javascript:void(0);" className="rts-btn btn-primary ml--20">
+                    <Link href="javascript:void(0);" className="rts-btn btn-primary ml--20">
                       <i className="fa-light fa-heart" />
-                    </a>
+                    </Link>
                   </div>
 
                   <div className="product-uniques">

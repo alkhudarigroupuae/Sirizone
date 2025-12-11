@@ -36,12 +36,6 @@ function FeaturesGrid() {
     const postsSection3 = getPostsByIndices(postIndicesSection3);
     const postsSection4 = getPostsByIndices(postIndicesSection4);
 
-
-
-
-
-
-
     return (
         <div className="new-offer-section-area rts-section-gap bg_light-1">
             <div className="container-2">

@@ -14,15 +14,6 @@ interface PostType {
     price?: string;
 }
 
-
-
-
-
-
-
-
-
-
 function RecentlyAdded() {
 
     // product content
@@ -40,15 +31,6 @@ function RecentlyAdded() {
     const postsSection2 = getPostsByIndices(postIndicesSection2);
     const postsSection3 = getPostsByIndices(postIndicesSection3);
     const postsSection4 = getPostsByIndices(postIndicesSection4);
-
-
-
-
-
-
-
-
-
 
   return (
     <div>

@@ -6,14 +6,15 @@ import Cart from './Cart';
 import WishList from './WishList';
 import BackToTop from "@/components/common/BackToTop";
 import Sidebar from './Sidebar';
-import { useCompare } from '@/components/header/CompareContext'; 
+import { useCompare } from '@/components/header/CompareContext';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 
 function HeaderFive() {
 
 
-const { compareItems } = useCompare();
+  const { compareItems } = useCompare();
   // header sticky
   const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {
@@ -54,77 +55,77 @@ const { compareItems } = useCompare();
 
 
 
-// filter search action js start
-    const router = useRouter();
-    const [searchTerm, setSearchTerm] = useState('');
-    const [suggestions, setSuggestions] = useState<string[]>([]);
-    const [showSuggestions, setShowSuggestions] = useState(false);
-    const inputRef = useRef<HTMLInputElement>(null);
+  // filter search action js start
+  const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-    const allSuggestions = [
-        "Profitable business makes your profit Best Solution",
-        "Details Profitable business makes your profit",
-        "One Profitable business makes your profit",
-        "Me Profitable business makes your profit",
-        "Details business makes your profit",
-        "Firebase business makes your profit",
-        "Netlyfy business makes your profit",
-        "Profitable business makes your profit",
-        "Valuable business makes your profit",
-        "System business makes your profit",
-        "Profitables business makes your profit",
-        "Content business makes your profit",
-        "Dalivaring business makes your profit",
-        "Staning business makes your profit",
-        "Best business makes your profit",
-        "cooler business makes your profit",
-        "Best-one Profitable business makes your profit",
-        "Super Fresh Meat",
-        "Original Fresh frut",
-        "Organic Fresh frut",
-        "Lite Fresh frut"
-    ];
+  const allSuggestions = [
+    "Profitable business makes your profit Best Solution",
+    "Details Profitable business makes your profit",
+    "One Profitable business makes your profit",
+    "Me Profitable business makes your profit",
+    "Details business makes your profit",
+    "Firebase business makes your profit",
+    "Netlyfy business makes your profit",
+    "Profitable business makes your profit",
+    "Valuable business makes your profit",
+    "System business makes your profit",
+    "Profitables business makes your profit",
+    "Content business makes your profit",
+    "Dalivaring business makes your profit",
+    "Staning business makes your profit",
+    "Best business makes your profit",
+    "cooler business makes your profit",
+    "Best-one Profitable business makes your profit",
+    "Super Fresh Meat",
+    "Original Fresh fruit",
+    "Organic Fresh fruit",
+    "Lite Fresh fruit"
+  ];
 
-    useEffect(() => {
-        if (searchTerm.trim().length > 0) {
-            const filtered = allSuggestions.filter(item =>
-                item.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-            setSuggestions(filtered.slice(0, 5));
-            setShowSuggestions(true);
-        } else {
-            setSuggestions([]);
-            setShowSuggestions(false);
-        }
-    }, [searchTerm]);
+  useEffect(() => {
+    if (searchTerm.trim().length > 0) {
+      const filtered = allSuggestions.filter(item =>
+        item.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setSuggestions(filtered.slice(0, 5));
+      setShowSuggestions(true);
+    } else {
+      setSuggestions([]);
+      setShowSuggestions(false);
+    }
+  }, [searchTerm]);
 
-    const handleSuggestionClick = (suggestion: string) => {
-        setSearchTerm(suggestion);
+  const handleSuggestionClick = (suggestion: string) => {
+    setSearchTerm(suggestion);
+    setShowSuggestions(false);
+    router.push(`/shop?search=${encodeURIComponent(suggestion)}`);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (inputRef.current && !inputRef.current.contains(event.target as Node)) {
         setShowSuggestions(false);
-        router.push(`/shop?search=${encodeURIComponent(suggestion)}`);
+      }
     };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (inputRef.current && !inputRef.current.contains(event.target as Node)) {
-                setShowSuggestions(false);
-            }
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      router.push(`/shop?search=${encodeURIComponent(searchTerm.trim())}`);
+      setShowSuggestions(false);
+    } else {
+      router.push('/shop');
+    }
+  };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (searchTerm.trim()) {
-            router.push(`/shop?search=${encodeURIComponent(searchTerm.trim())}`);
-            setShowSuggestions(false);
-        } else {
-            router.push('/shop');
-        }
-    };
-
-    // filter search action js end
+  // filter search action js end
 
 
   return (
@@ -196,66 +197,66 @@ const { compareItems } = useCompare();
                                 </div>
                               </div>
                               <form onSubmit={handleSubmit} className="search-header" autoComplete="off">
-                                            <input
-                                                ref={inputRef}
-                                                type="text"
-                                                placeholder="Search for products, categories or brands"
-                                                required
-                                                value={searchTerm}
-                                                onChange={(e) => setSearchTerm(e.target.value)}
-                                                onFocus={() => searchTerm.length > 0 && setShowSuggestions(true)}
-                                            />
-                                            <button type="submit" className="rts-btn btn-primary radious-sm with-icon">
-                                                <div className="btn-text">Search</div>
-                                                <div className="arrow-icon">
-                                                    <i className="fa-light fa-magnifying-glass" />
-                                                </div>
-                                            </button>
+                                <input
+                                  ref={inputRef}
+                                  type="text"
+                                  placeholder="Search for products, categories or brands"
+                                  required
+                                  value={searchTerm}
+                                  onChange={(e) => setSearchTerm(e.target.value)}
+                                  onFocus={() => searchTerm.length > 0 && setShowSuggestions(true)}
+                                />
+                                <button type="submit" className="rts-btn btn-primary radious-sm with-icon">
+                                  <div className="btn-text">Search</div>
+                                  <div className="arrow-icon">
+                                    <i className="fa-light fa-magnifying-glass" />
+                                  </div>
+                                </button>
 
-                                            {/* Autocomplete dropdown */}
-                                            {showSuggestions && suggestions.length > 0 && (
-                                                <ul className="autocomplete-suggestions" style={{
-                                                    position: 'absolute',
-                                                    backgroundColor: '#fff',
-                                                    border: '1px solid #ccc',
-                                                    marginTop: '4px',
-                                                    width: '100%',
-                                                    maxHeight: '200px',
-                                                    overflowY: 'auto',
-                                                    zIndex: 1000,
-                                                    listStyleType: 'none',
-                                                    padding: 0,
-                                                    borderRadius: '4px',
-                                                }}>
-                                                    {suggestions.map((suggestion, index) => (
-                                                        <li
-                                                            key={index}
-                                                            onClick={() => handleSuggestionClick(suggestion)}
-                                                            style={{
-                                                                padding: '8px 12px',
-                                                                cursor: 'pointer',
-                                                            }}
-                                                            onMouseDown={(e) => e.preventDefault()} // prevent input blur
-                                                        >
-                                                            {suggestion}
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            )}
-                                        </form>
+                                {/* Autocomplete dropdown */}
+                                {showSuggestions && suggestions.length > 0 && (
+                                  <ul className="autocomplete-suggestions" style={{
+                                    position: 'absolute',
+                                    backgroundColor: '#fff',
+                                    border: '1px solid #ccc',
+                                    marginTop: '4px',
+                                    width: '100%',
+                                    maxHeight: '200px',
+                                    overflowY: 'auto',
+                                    zIndex: 1000,
+                                    listStyleType: 'none',
+                                    padding: 0,
+                                    borderRadius: '4px',
+                                  }}>
+                                    {suggestions.map((suggestion, index) => (
+                                      <li
+                                        key={index}
+                                        onClick={() => handleSuggestionClick(suggestion)}
+                                        style={{
+                                          padding: '8px 12px',
+                                          cursor: 'pointer',
+                                        }}
+                                        onMouseDown={(e) => e.preventDefault()} // prevent input blur
+                                      >
+                                        {suggestion}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
+                              </form>
                             </div>
                             <div className="accont-wishlist-cart-area-header">
-                              <a
+                              <Link
                                 href="/account"
                                 className="btn-border-only account"
                               >
                                 <i className="fa-light fa-user" />
                                 Account
-                              </a>
-                              <a href="/shop-compare" className="btn-border-only account compare-number">
-                                  <i className="fa-regular fa-code-compare"></i>
-                                  <span className="number">{compareItems.length}</span>
-                              </a>
+                              </Link>
+                              <Link href="/shop-compare" className="btn-border-only account compare-number">
+                                <i className="fa-regular fa-code-compare"></i>
+                                <span className="number">{compareItems.length}</span>
+                              </Link>
                               <WishList />
                               <Cart />
                             </div>
@@ -401,14 +402,14 @@ const { compareItems } = useCompare();
                     </div>
                     <div className="main-wrapper-action-2 d-flex">
                       <div className="accont-wishlist-cart-area-header">
-                        <a href="/account" className="btn-border-only account">
+                        <Link href="/account" className="btn-border-only account">
                           <i className="fa-light fa-user" />
                           Account
-                        </a>
-                        <a href="/wishlist" className="btn-border-only wishlist">
+                        </Link>
+                        <Link href="/wishlist" className="btn-border-only wishlist">
                           <i className="fa-regular fa-heart" />
                           Wishlist
-                        </a>
+                        </Link>
                         <div className="btn-border-only cart category-hover-header">
                           <i className="fa-sharp fa-regular fa-cart-shopping" />
                           <span className="text">My Cart</span>
@@ -422,11 +423,11 @@ const { compareItems } = useCompare();
                                   <img src="assets/images/shop/cart-1.png" alt="" />
                                 </div>
                                 <div className="details">
-                                  <a href="/shop">
+                                  <Link href="/shop">
                                     <h5 className="title">
                                       Foster Farms Breast Nuggets Shaped Chicken
                                     </h5>
-                                  </a>
+                                  </Link>
                                   <div className="number">
                                     1 <i className="fa-regular fa-x" />
                                     <span>$36.00</span>
@@ -443,11 +444,11 @@ const { compareItems } = useCompare();
                                   <img src="assets/images/shop/05.png" alt="" />
                                 </div>
                                 <div className="details">
-                                  <a href="/shop">
+                                  <Link href="/shop">
                                     <h5 className="title">
                                       Foster Farms Breast Nuggets Shaped Chicken
                                     </h5>
-                                  </a>
+                                  </Link>
                                   <div className="number">
                                     1 <i className="fa-regular fa-x" />
                                     <span>$36.00</span>
@@ -464,11 +465,11 @@ const { compareItems } = useCompare();
                                   <img src="assets/images/shop/04.png" alt="" />
                                 </div>
                                 <div className="details">
-                                  <a href="/shop">
+                                  <Link href="/shop">
                                     <h5 className="title">
                                       Foster Farms Breast Nuggets Shaped Chicken
                                     </h5>
-                                  </a>
+                                  </Link>
                                   <div className="number">
                                     1 <i className="fa-regular fa-x" />
                                     <span>$36.00</span>
@@ -503,19 +504,19 @@ const { compareItems } = useCompare();
                                 </p>
                               </div>
                               <div className="button-wrapper d-flex align-items-center justify-content-between">
-                                <a href="/cart" className="rts-btn btn-primary ">
+                                <Link href="/cart" className="rts-btn btn-primary ">
                                   View Cart
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                   href="/checkout"
                                   className="rts-btn btn-primary border-only"
                                 >
                                   CheckOut
-                                </a>
+                                </Link>
                               </div>
                             </div>
                           </div>
-                          <a href="/cart" className="over_link" />
+                          <Link href="/cart" className="over_link" />
                         </div>
                       </div>
                       <div className="actions-area">

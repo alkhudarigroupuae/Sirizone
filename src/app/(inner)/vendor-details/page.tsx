@@ -4,6 +4,7 @@ import HeaderOne from "@/components/header/HeaderOne";
 import ShortService from "@/components/service/ShortService";
 
 import FooterOne from "@/components/footer/FooterOne";
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -22,7 +23,7 @@ export default function Home() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="navigator-breadcrumb-wrapper">
-                                    <a href="/">Home</a>
+                                    <Link href="/">Home</Link>
                                     <i className="fa-regular fa-chevron-right" />
                                     <a className="current" href="#">
                                         Vendor Details
@@ -274,18 +275,18 @@ export default function Home() {
                                 <div className="row g-4 ml-v-dec-m mt--40">
                                     <div className="col-lg-4 col-md-6">
                                         <div className="single-shopping-card-one tranding-product">
-                                            <a href="/shop" className="thumbnail-preview">
+                                            <Link href="/shop" className="thumbnail-preview">
                                                 <img src="assets/images/grocery/08.jpg" alt="grocery" />
-                                            </a>
+                                            </Link>
                                             <div className="body-content">
                                                 <div className="time-tag">
                                                     <i className="fa-light fa-clock" />9 MINS
                                                 </div>
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <h4 className="title">
                                                         Pastine Mellin Filid Angelo 100% Di Grano Tenero
                                                     </h4>
-                                                </a>
+                                                </Link>
                                                 <span className="availability">500g Pack</span>
                                                 <div className="price-area">
                                                     <span className="current">$36.00</span>
@@ -296,18 +297,18 @@ export default function Home() {
                                     </div>
                                     <div className="col-lg-4 col-md-6">
                                         <div className="single-shopping-card-one tranding-product">
-                                            <a href="/shop" className="thumbnail-preview">
+                                            <Link href="/shop" className="thumbnail-preview">
                                                 <img src="assets/images/grocery/09.jpg" alt="grocery" />
-                                            </a>
+                                            </Link>
                                             <div className="body-content">
                                                 <div className="time-tag">
                                                     <i className="fa-light fa-clock" />9 MINS
                                                 </div>
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <h4 className="title">
                                                         Pastine Mellin Filid Angelo 100% Di Grano Tenero
                                                     </h4>
-                                                </a>
+                                                </Link>
                                                 <span className="availability">500g Pack</span>
                                                 <div className="price-area">
                                                     <span className="current">$36.00</span>
@@ -318,18 +319,18 @@ export default function Home() {
                                     </div>
                                     <div className="col-lg-4 col-md-6">
                                         <div className="single-shopping-card-one tranding-product">
-                                            <a href="/shop" className="thumbnail-preview">
+                                            <Link href="/shop" className="thumbnail-preview">
                                                 <img src="assets/images/grocery/10.jpg" alt="grocery" />
-                                            </a>
+                                            </Link>
                                             <div className="body-content">
                                                 <div className="time-tag">
                                                     <i className="fa-light fa-clock" />9 MINS
                                                 </div>
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <h4 className="title">
                                                         Pastine Mellin Filid Angelo 100% Di Grano Tenero
                                                     </h4>
-                                                </a>
+                                                </Link>
                                                 <span className="availability">500g Pack</span>
                                                 <div className="price-area">
                                                     <span className="current">$36.00</span>
@@ -340,18 +341,18 @@ export default function Home() {
                                     </div>
                                     <div className="col-lg-4 col-md-6">
                                         <div className="single-shopping-card-one tranding-product">
-                                            <a href="/shop" className="thumbnail-preview">
+                                            <Link href="/shop" className="thumbnail-preview">
                                                 <img src="assets/images/grocery/11.jpg" alt="grocery" />
-                                            </a>
+                                            </Link>
                                             <div className="body-content">
                                                 <div className="time-tag">
                                                     <i className="fa-light fa-clock" />9 MINS
                                                 </div>
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <h4 className="title">
                                                         Pastine Mellin Filid Angelo 100% Di Grano Tenero
                                                     </h4>
-                                                </a>
+                                                </Link>
                                                 <span className="availability">500g Pack</span>
                                                 <div className="price-area">
                                                     <span className="current">$36.00</span>
@@ -362,18 +363,18 @@ export default function Home() {
                                     </div>
                                     <div className="col-lg-4 col-md-6">
                                         <div className="single-shopping-card-one tranding-product">
-                                            <a href="/shop" className="thumbnail-preview">
+                                            <Link href="/shop" className="thumbnail-preview">
                                                 <img src="assets/images/grocery/12.jpg" alt="grocery" />
-                                            </a>
+                                            </Link>
                                             <div className="body-content">
                                                 <div className="time-tag">
                                                     <i className="fa-light fa-clock" />9 MINS
                                                 </div>
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <h4 className="title">
                                                         Pastine Mellin Filid Angelo 100% Di Grano Tenero
                                                     </h4>
-                                                </a>
+                                                </Link>
                                                 <span className="availability">500g Pack</span>
                                                 <div className="price-area">
                                                     <span className="current">$36.00</span>
@@ -384,18 +385,18 @@ export default function Home() {
                                     </div>
                                     <div className="col-lg-4 col-md-6">
                                         <div className="single-shopping-card-one tranding-product">
-                                            <a href="/shop" className="thumbnail-preview">
+                                            <Link href="/shop" className="thumbnail-preview">
                                                 <img src="assets/images/grocery/13.jpg" alt="grocery" />
-                                            </a>
+                                            </Link>
                                             <div className="body-content">
                                                 <div className="time-tag">
                                                     <i className="fa-light fa-clock" />9 MINS
                                                 </div>
-                                                <a href="/shop">
+                                                <Link href="/shop">
                                                     <h4 className="title">
                                                         Pastine Mellin Filid Angelo 100% Di Grano Tenero
                                                     </h4>
-                                                </a>
+                                                </Link>
                                                 <span className="availability">500g Pack</span>
                                                 <div className="price-area">
                                                     <span className="current">$36.00</span>

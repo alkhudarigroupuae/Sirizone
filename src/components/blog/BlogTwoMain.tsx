@@ -16,9 +16,9 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
     return (
         <>
 
-            <a href={`/blog/${Slug}`} className="thumbnail">
+            <Link href={`/blog/${Slug}`} className="thumbnail">
                 <img src={`assets/images/blog/${blogImage}`} alt="blog-area" />
-            </a>
+            </Link>
             <div className="blog-body">
                 <div className="top-area">
                     <div className="single-meta">
@@ -30,12 +30,12 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                         <span>Modern Fashion</span>
                     </div>
                 </div>
-                <a href={`/blog/${Slug}`}>
+                <Link href={`/blog/${Slug}`}>
                     <h4 className="title">
                         {blogTitle ? blogTitle : 'How to growing your business'}
                     </h4>
-                </a>
-                <a href={`/blog/${Slug}`} className="shop-now-goshop-btn">
+                </Link>
+                <Link href={`/blog/${Slug}`} className="shop-now-goshop-btn">
                     <span className="text">Read Details</span>
                     <div className="plus-icon">
                         <i className="fa-sharp fa-regular fa-plus" />
@@ -43,7 +43,7 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                     <div className="plus-icon">
                         <i className="fa-sharp fa-regular fa-plus" />
                     </div>
-                </a>
+                </Link>
             </div>
 
         </>

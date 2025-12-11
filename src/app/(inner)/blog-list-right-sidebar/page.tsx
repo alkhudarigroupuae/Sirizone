@@ -6,6 +6,7 @@ import ShortService from '@/components/service/ShortService';
 import FooterOne from '@/components/footer/FooterOne';
 import BlogListMain from './BlogListMain';
 import Posts from '@/data/Posts.json';
+import Link from 'next/link';
 
 interface PostType {
     category?: string;
@@ -35,7 +36,7 @@ export default function BlogGridPage() {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="navigator-breadcrumb-wrapper">
-                                <a href="/">Home</a>
+                                <Link href="/">Home</Link>
                                 <i className="fa-regular fa-chevron-right" />
                                 <a className="current" href="#">
                                     Blog Lists With Sidebar

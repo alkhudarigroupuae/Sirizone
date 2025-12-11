@@ -6,6 +6,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 const products = [
   {
@@ -113,7 +114,7 @@ export default function CategorySlider() {
                             {products.map((item) => (
                               <SwiperSlide key={item.id}>
                                 <div className="single-shopping-card-one tranding-product">
-                                  <a href="/shop" className="thumbnail-preview">
+                                  <Link href="/shop" className="thumbnail-preview">
                                     <Image
                                       src={item.img}
                                       alt="grocery"
@@ -121,7 +122,7 @@ export default function CategorySlider() {
                                       height={300}
                                       layout="responsive"
                                     />
-                                  </a>
+                                  </Link>
                                   <div className="body-content">
                                     <a href="/shop">
                                       <h4 className="title">{item.title}</h4>

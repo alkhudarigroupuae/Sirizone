@@ -6,6 +6,7 @@ import ShopMainList from "./ShopMainList";
 import Product from '@/data/Product.json';
 import FooterOne from "@/components/footer/FooterOne";
 import { useSearchParams } from 'next/navigation';
+import Link from "next/link";
 
 interface PostType {
   category?: string;
@@ -142,7 +143,7 @@ function ShopContent() {
           <div className="row">
             <div className="col-lg-12">
               <div className="navigator-breadcrumb-wrapper">
-                <a href="/">Home</a>
+                <Link href="/">Home</Link>
                 <i className="fa-regular fa-chevron-right" />
                 <a className="current" href="#">Shop</a>
               </div>

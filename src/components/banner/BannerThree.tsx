@@ -6,6 +6,7 @@ import { Navigation, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
+import Link from 'next/link';
 
 const BannerThreeSwiper = () => {
   return (
@@ -50,11 +51,11 @@ const BannerThreeSwiper = () => {
                     <p className="dsicription">
                       We have prepared special discounts for you on grocery products. Don't miss these opportunities...
                     </p>
-                    <a href="/shop" className="rts-btn btn-primary radious-sm with-icon">
+                    <Link href="/shop" className="rts-btn btn-primary radious-sm with-icon">
                       <div className="btn-text">Shop Now</div>
                       <div className="arrow-icon"><i className="fa-light fa-arrow-right"></i></div>
                       <div className="arrow-icon"><i className="fa-light fa-arrow-right"></i></div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -78,11 +79,11 @@ const BannerThreeSwiper = () => {
                     <p className="dsicription">
                       We have prepared special discounts for you on grocery products. Don't miss these opportunities...
                     </p>
-                    <a href="/shop" className="rts-btn btn-primary radious-sm with-icon">
+                    <Link href="/shop" className="rts-btn btn-primary radious-sm with-icon">
                       <div className="btn-text">Shop Now</div>
                       <div className="arrow-icon"><i className="fa-light fa-arrow-right"></i></div>
                       <div className="arrow-icon"><i className="fa-light fa-arrow-right"></i></div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

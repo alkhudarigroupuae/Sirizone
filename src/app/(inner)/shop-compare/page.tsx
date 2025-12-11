@@ -3,6 +3,7 @@
 import HeaderOne from "@/components/header/HeaderOne";
 import FooterOne from "@/components/footer/FooterOne";
 import CompareElements from "./CompareElements";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -14,7 +15,7 @@ export default function Home() {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="navigator-breadcrumb-wrapper">
-                                <a href="/">Home</a>
+                                <Link href="/">Home</Link>
                                 <i className="fa-regular fa-chevron-right" />
                                 <a className="current" href="#">
                                     Shop

@@ -4,6 +4,7 @@ import HeaderOne from "@/components/header/HeaderOne";
 import ShortService from "@/components/service/ShortService";
 
 import FooterOne from "@/components/footer/FooterOne";
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -22,11 +23,11 @@ export default function Home() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="navigator-breadcrumb-wrapper">
-                                    <a href="/">Home</a>
+                                    <Link href="/">Home</Link>
                                     <i className="fa-regular fa-chevron-right" />
-                                    <a className="current" href="/shop">
+                                    <Link className="current" href="/shop">
                                         Vendor Grid
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +50,7 @@ export default function Home() {
                                             type="text"
                                             placeholder="Search vendors (by name or ID)..."
                                         />
-                                        <a href="/shop" className="rts-btn btn-primary radious-sm with-icon">
+                                        <Link href="/shop" className="rts-btn btn-primary radious-sm with-icon">
                                             <div className="btn-text">Search</div>
                                             <div className="arrow-icon">
                                                 <i className="fa-light fa-magnifying-glass" />
@@ -57,7 +58,7 @@ export default function Home() {
                                             <div className="arrow-icon">
                                                 <i className="fa-light fa-magnifying-glass" />
                                             </div>
-                                        </a>
+                                        </Link>
                                     </form>
                                 </div>
                             </div>
@@ -246,7 +247,7 @@ export default function Home() {
                                                             <i className="fa-solid fa-phone-volume" />
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
-                                                        <a
+                                                        <Link
                                                             href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
@@ -257,7 +258,7 @@ export default function Home() {
                                                             <div className="arrow-icon">
                                                                 <i className="fa-light fa-arrow-right" />
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -286,7 +287,7 @@ export default function Home() {
                                                             <i className="fa-solid fa-phone-volume" />
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
-                                                        <a
+                                                        <Link
                                                             href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
@@ -297,7 +298,7 @@ export default function Home() {
                                                             <div className="arrow-icon">
                                                                 <i className="fa-light fa-arrow-right" />
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -326,7 +327,7 @@ export default function Home() {
                                                             <i className="fa-solid fa-phone-volume" />
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
-                                                        <a
+                                                        <Link
                                                             href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
@@ -337,7 +338,7 @@ export default function Home() {
                                                             <div className="arrow-icon">
                                                                 <i className="fa-light fa-arrow-right" />
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -366,7 +367,7 @@ export default function Home() {
                                                             <i className="fa-solid fa-phone-volume" />
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
-                                                        <a
+                                                        <Link
                                                             href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
@@ -377,7 +378,7 @@ export default function Home() {
                                                             <div className="arrow-icon">
                                                                 <i className="fa-light fa-arrow-right" />
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -406,7 +407,7 @@ export default function Home() {
                                                             <i className="fa-solid fa-phone-volume" />
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
-                                                        <a
+                                                        <Link
                                                             href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
@@ -417,7 +418,7 @@ export default function Home() {
                                                             <div className="arrow-icon">
                                                                 <i className="fa-light fa-arrow-right" />
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -486,7 +487,7 @@ export default function Home() {
                                                             <i className="fa-solid fa-phone-volume" />
                                                             <p>+1 (511) 934-8170</p>
                                                         </div>
-                                                        <a
+                                                        <Link
                                                             href="/shop"
                                                             className="rts-btn btn-primary radious-sm with-icon"
                                                         >
@@ -497,7 +498,7 @@ export default function Home() {
                                                             <div className="arrow-icon">
                                                                 <i className="fa-light fa-arrow-right" />
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             </div>
@@ -533,7 +534,7 @@ export default function Home() {
                                                                 <i className="fa-solid fa-phone-volume" />
                                                                 <p>+1 (511) 934-8170</p>
                                                             </div>
-                                                            <a
+                                                            <Link
                                                                 href="/shop"
                                                                 className="rts-btn btn-primary radious-sm with-icon"
                                                             >
@@ -544,7 +545,7 @@ export default function Home() {
                                                                 <div className="arrow-icon">
                                                                     <i className="fa-light fa-arrow-right" />
                                                                 </div>
-                                                            </a>
+                                                            </Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -575,7 +576,7 @@ export default function Home() {
                                                                 <i className="fa-solid fa-phone-volume" />
                                                                 <p>+1 (511) 934-8170</p>
                                                             </div>
-                                                            <a
+                                                            <Link
                                                                 href="/shop"
                                                                 className="rts-btn btn-primary radious-sm with-icon"
                                                             >
@@ -586,7 +587,7 @@ export default function Home() {
                                                                 <div className="arrow-icon">
                                                                     <i className="fa-light fa-arrow-right" />
                                                                 </div>
-                                                            </a>
+                                                            </Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -617,7 +618,7 @@ export default function Home() {
                                                                 <i className="fa-solid fa-phone-volume" />
                                                                 <p>+1 (511) 934-8170</p>
                                                             </div>
-                                                            <a
+                                                            <Link
                                                                 href="/shop"
                                                                 className="rts-btn btn-primary radious-sm with-icon"
                                                             >
@@ -628,7 +629,7 @@ export default function Home() {
                                                                 <div className="arrow-icon">
                                                                     <i className="fa-light fa-arrow-right" />
                                                                 </div>
-                                                            </a>
+                                                            </Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -659,7 +660,7 @@ export default function Home() {
                                                                 <i className="fa-solid fa-phone-volume" />
                                                                 <p>+1 (511) 934-8170</p>
                                                             </div>
-                                                            <a
+                                                            <Link
                                                                 href="/shop"
                                                                 className="rts-btn btn-primary radious-sm with-icon"
                                                             >
@@ -670,7 +671,7 @@ export default function Home() {
                                                                 <div className="arrow-icon">
                                                                     <i className="fa-light fa-arrow-right" />
                                                                 </div>
-                                                            </a>
+                                                            </Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -701,7 +702,7 @@ export default function Home() {
                                                                 <i className="fa-solid fa-phone-volume" />
                                                                 <p>+1 (511) 934-8170</p>
                                                             </div>
-                                                            <a
+                                                            <Link
                                                                 href="/shop"
                                                                 className="rts-btn btn-primary radious-sm with-icon"
                                                             >
@@ -712,7 +713,7 @@ export default function Home() {
                                                                 <div className="arrow-icon">
                                                                     <i className="fa-light fa-arrow-right" />
                                                                 </div>
-                                                            </a>
+                                                            </Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -743,7 +744,7 @@ export default function Home() {
                                                                 <i className="fa-solid fa-phone-volume" />
                                                                 <p>+1 (511) 934-8170</p>
                                                             </div>
-                                                            <a
+                                                            <Link
                                                                 href="/shop"
                                                                 className="rts-btn btn-primary radious-sm with-icon"
                                                             >
@@ -754,7 +755,7 @@ export default function Home() {
                                                                 <div className="arrow-icon">
                                                                     <i className="fa-light fa-arrow-right" />
                                                                 </div>
-                                                            </a>
+                                                            </Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -785,7 +786,7 @@ export default function Home() {
                                                                 <i className="fa-solid fa-phone-volume" />
                                                                 <p>+1 (511) 934-8170</p>
                                                             </div>
-                                                            <a
+                                                            <Link
                                                                 href="/shop"
                                                                 className="rts-btn btn-primary radious-sm with-icon"
                                                             >
@@ -796,7 +797,7 @@ export default function Home() {
                                                                 <div className="arrow-icon">
                                                                     <i className="fa-light fa-arrow-right" />
                                                                 </div>
-                                                            </a>
+                                                            </Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -828,7 +829,7 @@ export default function Home() {
                                                                 <i className="fa-solid fa-phone-volume" />
                                                                 <p>+1 (511) 934-8170</p>
                                                             </div>
-                                                            <a
+                                                            <Link
                                                                 href="/shop"
                                                                 className="rts-btn btn-primary radious-sm with-icon"
                                                             >
@@ -839,7 +840,7 @@ export default function Home() {
                                                                 <div className="arrow-icon">
                                                                     <i className="fa-light fa-arrow-right" />
                                                                 </div>
-                                                            </a>
+                                                            </Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -852,12 +853,7 @@ export default function Home() {
                     </div>
                 </div>
                 {/* vendor filter area end */}
-
-
-
             </>
-
-
             <ShortService />
             <FooterOne />
 

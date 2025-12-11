@@ -78,9 +78,9 @@ const WishList: React.FC = () => {
                     </div>
 
                     <div className="button-wrapper d-flex align-items-center justify-content-between">
-                        <a href="/wishlist" className="rts-btn btn-primary">
+                        <Link href="/wishlist" className="rts-btn btn-primary">
                             View Wishlist
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

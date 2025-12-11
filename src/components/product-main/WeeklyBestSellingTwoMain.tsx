@@ -23,11 +23,6 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
     const [activeModal, setActiveModal] = useState<ModalType>(null);
     const handleClose = () => setActiveModal(null);
 
-
-
-
-
-
     // number count up and down
     useEffect(() => {
         const handleQuantityClick = (e: Event) => {
@@ -73,9 +68,7 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
 
     return (
         <>
- 
-
-            <a href={`/shop/${Slug}`} className="thumbanil">
+            <Link href={`/shop/${Slug}`} className="thumbanil">
                 <img src={`/assets/images/best-seller/${ProductImage}`} alt="seller" />
                 <div className="action-share-option">
                     <div
@@ -102,55 +95,21 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                         <i className="fa-regular fa-eye" />
                     </div>
                 </div>
-            </a>
+            </Link>
             <div className="inner">
-                <a href={`/shop/${Slug}`}>
+                <Link href={`/shop/${Slug}`}>
                     <h4 className="title">{ProductTitle ? ProductTitle : 'How to growing your business'}</h4>
-                </a>
+                </Link>
                 <h6 className="price">{`$${Price}`}</h6>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <CompareModal show={activeModal === 'one'} handleClose={handleClose} />
-    <ProductDetails
-        show={activeModal === 'two'}
-        handleClose={handleClose}
-        productImage={`/assets/images/grocery/${ProductImage}`}
-        productTitle={ProductTitle ?? 'Default Product Title'}
-        productPrice={Price ?? '0'}
-      />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <ProductDetails
+                show={activeModal === 'two'}
+                handleClose={handleClose}
+                productImage={`/assets/images/grocery/${ProductImage}`}
+                productTitle={ProductTitle ?? 'Default Product Title'}
+                productPrice={Price ?? '0'}
+            />
         </>
 
 

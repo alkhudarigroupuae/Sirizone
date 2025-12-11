@@ -64,9 +64,9 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
     return (
         <>
 
-            <a href={`/shop/${Slug}`} className="thumbnail">
+            <Link href={`/shop/${Slug}`} className="thumbnail">
                 <img src={`/assets/images/grocery/${ProductImage}`} alt="product" />
-            </a>
+            </Link>
             <div className="body-content">
                 <div className="top">
                     <div className="stars-area">
@@ -76,11 +76,11 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                         <i className="fa-solid fa-star" />
                         <i className="fa-solid fa-star" />
                     </div>
-                    <a href={`/shop/${Slug}`}>
+                    <Link href={`/shop/${Slug}`}>
                         <h4 className="title">
                             {ProductTitle ? ProductTitle : 'How to growing your business'}
                         </h4>
-                    </a>
+                    </Link>
                     <div className="price-area">
                         <span className="current">{`$${Price}`}</span>
                         <div className="previous">$36.00</div>

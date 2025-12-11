@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 function ComponentName() {
@@ -17,9 +18,9 @@ function ComponentName() {
               tempor purus ac suscipit sagittis. Nunc finibus euismod enim, eu
               finibus nunc ullamcorper et.
             </p>
-            <a href="#" className="rts-btn btn-primary">
+            <Link href="/contact" className="rts-btn btn-primary">
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </div>

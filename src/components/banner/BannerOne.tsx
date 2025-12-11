@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import CategoryBb from './CategoryBb';
+import Link from 'next/link';
 const BannerOne = () => {
 
     return (
@@ -45,7 +46,7 @@ const BannerOne = () => {
                                                     Do not miss our amazing <br />
                                                     grocery deals
                                                 </h1>
-                                                <a
+                                                <Link
                                                     href="/shop"
                                                     className="rts-btn btn-primary radious-sm with-icon"
                                                 >
@@ -56,7 +57,7 @@ const BannerOne = () => {
                                                     <div className="arrow-icon">
                                                         <i className="fa-light fa-arrow-right"></i>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                     </SwiperSlide>
@@ -71,7 +72,7 @@ const BannerOne = () => {
                                                     Do not miss our amazing <br />
                                                     grocery deals
                                                 </h1>
-                                                <a
+                                                <Link
                                                     href="/shop"
                                                     className="rts-btn btn-primary radious-sm with-icon"
                                                 >
@@ -82,7 +83,7 @@ const BannerOne = () => {
                                                     <div className="arrow-icon">
                                                         <i className="fa-light fa-arrow-right"></i>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                     </SwiperSlide>

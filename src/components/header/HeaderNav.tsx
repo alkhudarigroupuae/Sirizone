@@ -2,6 +2,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import Nav from './Nav';
+import Link from 'next/link';
 
 function ComponentName() {
 
@@ -71,13 +72,13 @@ function ComponentName() {
                         </div>
                         <div className="col-lg-12">
                             <div className="logo-search-category-wrapper after-md-device-header">
-                                <a href="index" className="logo-area">
+                                <Link href="/" className="logo-area">
                                     <img
                                         src="/assets/images/logo/logo-01.svg"
                                         alt="logo-main"
                                         className="logo"
                                     />
-                                </a>
+                                </Link>
                                 <div className="category-search-wrapper">
                                     <div className="category-btn category-hover-header">
                                         <img
@@ -172,10 +173,10 @@ function ComponentName() {
                                 </div>
                                 <div className="main-wrapper-action-2 d-flex">
                                     <div className="accont-wishlist-cart-area-header">
-                                        <a href="/account" className="btn-border-only account">
+                                        <Link href="/account" className="btn-border-only account">
                                             <i className="fa-light fa-user" />
                                             Account
-                                        </a>
+                                        </Link>
                                         <a href="/wishlist" className="btn-border-only wishlist">
                                             <i className="fa-regular fa-heart" />
                                             Wishlist
@@ -274,19 +275,19 @@ function ComponentName() {
                                                         </p>
                                                     </div>
                                                     <div className="button-wrapper d-flex align-items-center justify-content-between">
-                                                        <a href="/cart" className="rts-btn btn-primary ">
+                                                        <Link href="/cart" className="rts-btn btn-primary ">
                                                             View Cart
-                                                        </a>
-                                                        <a
+                                                        </Link>
+                                                        <Link
                                                             href="/checkout"
                                                             className="rts-btn btn-primary border-only"
                                                         >
                                                             CheckOut
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="/cart" className="over_link" />
+                                            <Link href="/cart" className="over_link" />
                                         </div>
                                     </div>
                                     <div className="actions-area">

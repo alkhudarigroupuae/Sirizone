@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Vendor {
   id: number;
@@ -170,7 +171,7 @@ const VendorGrid = () => {
                 <i className="fa-solid fa-phone-volume" />
                 <p>{vendor.phone}</p>
               </div>
-              <a
+              <Link
                 href="/vendor-details"
                 className="rts-btn btn-primary radious-sm with-icon"
               >
@@ -181,7 +182,7 @@ const VendorGrid = () => {
                 <div className="arrow-icon">
                   <i className="fa-light fa-arrow-right" />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         ))}

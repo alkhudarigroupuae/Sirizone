@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Link from 'next/link';
 
 const FeaturedCategories = () => {
   const categories = [
@@ -65,10 +66,10 @@ const FeaturedCategories = () => {
                 {categories.map((img, index) => (
                   <SwiperSlide key={index}>
                     <div className="single-category-one">
-                      <a href="shop-grid-sidebar.html">
+                      <Link href="shop-grid-sidebar.html">
                         <img src={`/assets/images/category/${img}`} alt="category" />
                         <p>Organic Vegetable</p>
-                      </a>
+                      </Link>
                     </div>
                   </SwiperSlide>
                 ))}

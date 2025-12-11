@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Link from 'next/link';
 const categories = [
     { img: '/assets/images/category/01.png', title: 'Organic Vegetable', items: '299 Items' },
     { img: '/assets/images/category/02.png', title: 'Organic Vegetable', items: '299 Items' },
@@ -64,11 +65,11 @@ const FeaturedCategories = () => {
                                                         {categories.map((category, index) => (
                                                             <SwiperSlide key={index}>
                                                                 <div className="single-category-one height-180">
-                                                                    <a href="#">
+                                                                    <Link href="#">
                                                                         <Image src={category.img} alt="category" width={100} height={100} />
                                                                         <p>{category.title}</p>
                                                                         <span>{category.items}</span>
-                                                                    </a>
+                                                                    </Link>
                                                                 </div>
                                                             </SwiperSlide>
                                                         ))}

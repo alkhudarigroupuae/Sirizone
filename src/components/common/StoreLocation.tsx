@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 function ComponentName() {
@@ -11,9 +12,9 @@ function ComponentName() {
         <div className="col-lg-12">
           {/* single store area start */}
           <div className="single-store-area-start">
-            <a href="#" className="thumbnail">
+            <Link href="#" className="thumbnail">
               <img src="assets/images/store/01.jpg" alt="store_area" />
-            </a>
+            </Link>
             <div className="right-content">
               <div className="location-area">
                 <div className="icon">
@@ -24,9 +25,9 @@ function ComponentName() {
                   259 Daniel Road, FKT 2589 Berlin, Germany.
                 </p>
                 <div className="contact-info">
-                  <a href="#" className="number">
+                  <Link href="#" className="number">
                     +856 (76) 259 6328
-                  </a>
+                  </Link>
                   <a href="#">info@example.com</a>
                 </div>
               </div>
@@ -46,9 +47,9 @@ function ComponentName() {
           {/* single store area end */}
           {/* single store area start */}
           <div className="single-store-area-start">
-            <a href="#" className="thumbnail">
+            <Link href="#" className="thumbnail">
               <img src="assets/images/store/02.jpg" alt="store_area" />
-            </a>
+            </Link>
             <div className="right-content">
               <div className="location-area">
                 <div className="icon">
@@ -59,10 +60,10 @@ function ComponentName() {
                   259 Daniel Road, FKT 2589 Berlin, Germany.
                 </p>
                 <div className="contact-info">
-                  <a href="#" className="number">
+                  <Link href="#" className="number">
                     +856 (76) 259 6328
-                  </a>
-                  <a href="#">info@example.com</a>
+                  </Link>
+                  <Link href="#">info@example.com</Link>
                 </div>
               </div>
               <div className="opening-hour">
@@ -81,9 +82,9 @@ function ComponentName() {
           {/* single store area end */}
           {/* single store area start */}
           <div className="single-store-area-start">
-            <a href="#" className="thumbnail">
+            <Link href="#" className="thumbnail">
               <img src="assets/images/store/03.jpg" alt="store_area" />
-            </a>
+            </Link>
             <div className="right-content">
               <div className="location-area">
                 <div className="icon">
@@ -94,10 +95,10 @@ function ComponentName() {
                   259 Daniel Road, FKT 2589 Berlin, Germany.
                 </p>
                 <div className="contact-info">
-                  <a href="#" className="number">
+                  <Link href="#" className="number">
                     +856 (76) 259 6328
-                  </a>
-                  <a href="#">info@example.com</a>
+                  </Link>
+                  <Link href="#">info@example.com</Link>
                 </div>
               </div>
               <div className="opening-hour">

@@ -23,15 +23,6 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
     type ModalType = 'one' | 'two' | 'three' | null;
     const [activeModal, setActiveModal] = useState<ModalType>(null);
 
-
-
-
-
-
-
-
-
-
     // cart item
     const { addToCart } = useCart(); // Now works
 
@@ -64,7 +55,7 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
         <>
             {/* iamge and sction area start */}
             <div className="image-and-action-area-wrapper">
-                <a href={`/shop/${Slug}`} className="thumbnail-preview">
+                <Link href={`/shop/${Slug}`} className="thumbnail-preview">
                     <div className="badge">
                         <span>
                             25% <br />
@@ -73,7 +64,7 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                         <i className="fa-solid fa-bookmark" />
                     </div>
                     <img src={`/assets/images/grocery/${ProductImage}`} alt="grocery" />
-                </a>
+                </Link>
                 <div className="action-share-option">
                     <span
                         className="single-action openuptip message-show-action"
@@ -102,11 +93,11 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
             </div>
             {/* iamge and sction area start */}
             <div className="body-content">
-                <a href={`/shop/${Slug}`}>
+                <Link href={`/shop/${Slug}`}>
                     <h4 className="title">
                         {ProductTitle ? ProductTitle : 'How to growing your business'}
                     </h4>
-                </a>
+                </Link>
                 <span className="availability">500g Pack</span>
                 <div className="price-area">
                     <span className="current">{`$${Price}`}</span>
@@ -124,7 +115,7 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                             </button>
                         </div>
                     </div>
-                    <a href="#" className="rts-btn btn-primary radious-sm with-icon"
+                    <Link href="#" className="rts-btn btn-primary radious-sm with-icon"
                         onClick={e => {
                             e.preventDefault();
                             handleAdd();
@@ -137,7 +128,7 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                         <div className="arrow-icon">
                             <i className="fa-regular fa-cart-shopping" />
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
 

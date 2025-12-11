@@ -9,6 +9,7 @@ import { useWishlist } from "@/components/header/WishlistContext";
 import { useCompare } from '@/components/header/CompareContext'; //
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Link from 'next/link';
 
 
 
@@ -30,10 +31,6 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
     type ModalType = 'one' | 'two' | 'three' | null;
     const [activeModal, setActiveModal] = useState<ModalType>(null);
     const handleClose = () => setActiveModal(null);
-
-
-
-
 
 
     // number count up and down
@@ -138,9 +135,9 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                 <span>On sale</span>
             </div>
             <div className="image-and-action-area-wrapper">
-                <a href={`/shop/${Slug}`} className="thumbnail-preview">
+                <Link href={`/shop/${Slug}`} className="thumbnail-preview">
                     <img src={`/assets/images/grocery/${ProductImage}`} alt="grocery" />
-                </a>
+                </Link>
                 <div className="action-share-option">
                     <div
                         className="single-action openuptip message-show-action"
@@ -181,18 +178,18 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                     <i className="fa-solid fa-star" />
                     <i className="fa-solid fa-star" />
                 </div>
-                <a href={`/shop/${Slug}`}>
+                <Link href={`/shop/${Slug}`}>
                     <h4 className="title">
                         {ProductTitle ? ProductTitle : 'How to growing your business'}
                     </h4>
-                </a>
+                </Link>
                 <span className="availability">500g Pack</span>
                 <div className="price-area">
                     <span className="current">{`$${Price}`}</span>
                     <div className="previous">$36.00</div>
                 </div>
                 <div className="cart-counter-action">
-                    <a
+                    <Link
                         href="#"
                         className="rts-btn btn-primary add-to-card radious-sm with-icon"
                         onClick={e => {
@@ -208,30 +205,19 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                         <div className="arrow-icon">
                             <i className={added ? "fa-solid fa-check" : "fa-regular fa-cart-shopping"} />
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
 
-
-
-
-
-
             <CompareModal show={activeModal === 'one'} handleClose={handleClose} />
-    <ProductDetails
-        show={activeModal === 'two'}
-        handleClose={handleClose}
-        productImage={`/assets/images/grocery/${ProductImage}`}
-        productTitle={ProductTitle ?? 'Default Product Title'}
-        productPrice={Price ?? '0'}
-      />
-
-
-
-
+            <ProductDetails
+                show={activeModal === 'two'}
+                handleClose={handleClose}
+                productImage={`/assets/images/grocery/${ProductImage}`}
+                productTitle={ProductTitle ?? 'Default Product Title'}
+                productPrice={Price ?? '0'}
+            />
         </>
-
-
     );
 };
 

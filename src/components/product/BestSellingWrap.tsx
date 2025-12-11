@@ -109,7 +109,7 @@ const WeeklyBestSelling: React.FC = () => {
                                                                             Slug={post.slug}
                                                                             ProductImage={post.image}
                                                                             ProductTitle={post.title}
-									                                        Price={post.price}
+                                                                            Price={post.price}
                                                                         />
                                                                     </div>
                                                                 </div>
@@ -129,7 +129,7 @@ const WeeklyBestSelling: React.FC = () => {
                                                                         Slug={post.slug}
                                                                         ProductImage={post.image}
                                                                         ProductTitle={post.title}
-									Price={post.price}
+                                                                        Price={post.price}
                                                                     />
                                                                 </div>
                                                             </div>
@@ -149,7 +149,7 @@ const WeeklyBestSelling: React.FC = () => {
                                                                         Slug={post.slug}
                                                                         ProductImage={post.image}
                                                                         ProductTitle={post.title}
-									Price={post.price}
+                                                                        Price={post.price}
                                                                     />
                                                                 </div>
                                                             </div>
@@ -169,7 +169,7 @@ const WeeklyBestSelling: React.FC = () => {
                                                                         Slug={post.slug}
                                                                         ProductImage={post.image}
                                                                         ProductTitle={post.title}
- 									Price={post.price}
+                                                                        Price={post.price}
                                                                     />
                                                                 </div>
                                                             </div>

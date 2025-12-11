@@ -31,11 +31,6 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
     const [activeModal, setActiveModal] = useState<ModalType>(null);
     const handleClose = () => setActiveModal(null);
 
-
-
-
-
-
     // number count up and down
     useEffect(() => {
         const handleQuantityClick = (e: Event) => {
@@ -107,26 +102,26 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
 
 
 
-    
-const { addToCompare } = useCompare();
-const handleCompare = () => {
-    addToCompare({
-      image: `/assets/images/grocery/${ProductImage}`,
-      name: ProductTitle ?? 'Default Product Title',
-      price: Price ?? '0',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', // Or dynamic if available
-      rating: 5, // Static or dynamic value
-      ratingCount: 25, // You can replace this
-      weight: '500g', // If you have dynamic, replace it
-      inStock: true, // Or false
-    });
-  };
+
+    const { addToCompare } = useCompare();
+    const handleCompare = () => {
+        addToCompare({
+            image: `/assets/images/grocery/${ProductImage}`,
+            name: ProductTitle ?? 'Default Product Title',
+            price: Price ?? '0',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', // Or dynamic if available
+            rating: 5, // Static or dynamic value
+            ratingCount: 25, // You can replace this
+            weight: '500g', // If you have dynamic, replace it
+            inStock: true, // Or false
+        });
+    };
 
 
-// tostify
-const compare = () => toast('Successfully Add To Compare !');
-const addcart = () => toast('Successfully Add To Cart !');
- const addwishlist = () => toast('Successfully Add To Wishlist !');
+    // tostify
+    const compare = () => toast('Successfully Add To Compare !');
+    const addcart = () => toast('Successfully Add To Cart !');
+    const addwishlist = () => toast('Successfully Add To Wishlist !');
 
 
 
@@ -161,10 +156,10 @@ const addcart = () => toast('Successfully Add To Cart !');
                         className="single-action openuptip"
                         data-flow="up"
                         title="Compare"
-                             onClick={() => {
-                                handleCompare();
-                                compare();
-                            }}
+                        onClick={() => {
+                            handleCompare();
+                            compare();
+                        }}
                     >
                         <i className="fa-solid fa-arrows-retweet" />
                     </div>
@@ -183,9 +178,9 @@ const addcart = () => toast('Successfully Add To Cart !');
                                           <i class="fa-light fa-clock"></i>
                                           9 MINS
                                       </div> */}
-                <a href={`/shop/${Slug}`}>
+                <Link href={`/shop/${Slug}`}>
                     <h4 className="title">{ProductTitle ? ProductTitle : 'How to growing your business'}</h4>
-                </a>
+                </Link>
                 <span className="availability">500g Pack</span>
                 <div className="price-area">
                     <span className="current">{`$${Price}`}</span>
@@ -203,35 +198,35 @@ const addcart = () => toast('Successfully Add To Cart !');
                             </button>
                         </div>
                     </div>
-                   <a
-            href="#"
-            className="rts-btn btn-primary add-to-card radious-sm with-icon"
-            onClick={e => {
-              e.preventDefault();
-              handleAdd();
-              addcart();
-            }}
-          >
-            <div className="btn-text">{added ? 'Added' : 'Add'}</div>
-            <div className="arrow-icon">
-              <i className={added ? "fa-solid fa-check" : "fa-regular fa-cart-shopping"} />
-            </div>
-            <div className="arrow-icon">
-              <i className={added ? "fa-solid fa-check" : "fa-regular fa-cart-shopping"} />
-            </div>
-          </a>
+                    <Link
+                        href="#"
+                        className="rts-btn btn-primary add-to-card radious-sm with-icon"
+                        onClick={e => {
+                            e.preventDefault();
+                            handleAdd();
+                            addcart();
+                        }}
+                    >
+                        <div className="btn-text">{added ? 'Added' : 'Add'}</div>
+                        <div className="arrow-icon">
+                            <i className={added ? "fa-solid fa-check" : "fa-regular fa-cart-shopping"} />
+                        </div>
+                        <div className="arrow-icon">
+                            <i className={added ? "fa-solid fa-check" : "fa-regular fa-cart-shopping"} />
+                        </div>
+                    </Link>
                 </div>
             </div>
 
 
             <CompareModal show={activeModal === 'one'} handleClose={handleClose} />
-    <ProductDetails
-        show={activeModal === 'two'}
-        handleClose={handleClose}
-        productImage={`/assets/images/grocery/${ProductImage}`}
-        productTitle={ProductTitle ?? 'Default Product Title'}
-        productPrice={Price ?? '0'}
-      />
+            <ProductDetails
+                show={activeModal === 'two'}
+                handleClose={handleClose}
+                productImage={`/assets/images/grocery/${ProductImage}`}
+                productTitle={ProductTitle ?? 'Default Product Title'}
+                productPrice={Price ?? '0'}
+            />
         </>
     );
 };

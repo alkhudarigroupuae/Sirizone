@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function FooterTwo() {
@@ -11,13 +12,13 @@ function FooterTwo() {
                             <div className="coll-lg-12">
                                 <div className="footer-two-main-wrapper">
                                     <div className="footer-single-wixed-two start">
-                                        <a href="#" className="logo-area">
+                                        <Link href="#" className="logo-area">
                                             <img
                                                 src="assets/images/logo/logo-02.svg"
                                                 alt="logo-area"
                                                 className="logo"
                                             />
-                                        </a>
+                                        </Link>
                                         <p className="disc">
                                             What’s inside: New Arrivals, Exclusive Sales, News &amp; Mores
                                         </p>

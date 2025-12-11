@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React, { useRef } from 'react';
 
 const DemoContent: React.FC = () => {
@@ -189,7 +190,7 @@ const DemoContent: React.FC = () => {
                 <i className="fa-regular fa-print" />
               </div>
             </button>
-            <a
+            <Link
               href="/assets/images/invoice/invoice.pdf"
               download="invoice.pdf"
               className="rts-btn btn-primary radious-sm with-icon"
@@ -201,7 +202,7 @@ const DemoContent: React.FC = () => {
               <div className="arrow-icon">
                 <i className="fa-thin fa-download" />
               </div>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="footer-copyright">

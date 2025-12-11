@@ -9,6 +9,7 @@ import BackToTop from "@/components/common/BackToTop";
 import Sidebar from './Sidebar';
 import { useCompare } from '@/components/header/CompareContext';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 function HeaderThree() {
     const { compareItems } = useCompare();
@@ -205,7 +206,7 @@ function HeaderThree() {
                                                 1st order in.
                                             </p>
                                             <div className="countdown">
-                                                <div className="countDown">10/05/2026 10:20:00</div>
+                                                <div className="countDown">02/02/2026 10:20:00</div>
                                             </div>
                                         </div>
                                         <div className="contact-number-area">
@@ -224,13 +225,13 @@ function HeaderThree() {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="logo-search-category-wrapper">
-                                        <a href="/" className="logo-area">
+                                        <Link href="/" className="logo-area">
                                             <img
                                                 src="assets/images/logo/logo-02.svg"
                                                 alt="logo-main"
                                                 className="logo"
                                             />
-                                        </a>
+                                        </Link>
                                         <div className="category-search-wrapper">
                                             <div className="category-btn category-hover-header">
                                                 <img
@@ -291,14 +292,14 @@ function HeaderThree() {
                                             </form>
                                         </div>
                                         <div className="accont-wishlist-cart-area-header">
-                                            <a href="/account" className="btn-border-only account">
+                                            <Link href="/account" className="btn-border-only account">
                                                 <i className="fa-light fa-user" />
                                                 Account
-                                            </a>
-                                            <a href="/shop-compare" className="btn-border-only account compare-number">
+                                            </Link>
+                                            <Link href="/shop-compare" className="btn-border-only account compare-number">
                                                 <i className="fa-regular fa-code-compare"></i>
                                                 <span className="number">{compareItems.length}</span>
-                                            </a>
+                                            </Link>
                                             <WishList />
                                             <Cart />
                                         </div>
@@ -428,14 +429,14 @@ function HeaderThree() {
                                         </div>
                                         <div className="main-wrapper-action-2 d-flex">
                                             <div className="accont-wishlist-cart-area-header">
-                                                <a href="/account" className="btn-border-only account">
+                                                <Link href="/account" className="btn-border-only account">
                                                     <i className="fa-light fa-user" />
                                                     Account
-                                                </a>
-                                                <a href="/wishlist" className="btn-border-only wishlist">
+                                                </Link>
+                                                <Link href="/wishlist" className="btn-border-only wishlist">
                                                     <i className="fa-regular fa-heart" />
                                                     Wishlist
-                                                </a>
+                                                </Link>
                                                 <div className="btn-border-only cart category-hover-header">
                                                     <i className="fa-sharp fa-regular fa-cart-shopping" />
                                                     <span className="text">My Cart</span>
@@ -470,11 +471,11 @@ function HeaderThree() {
                                                                     <img src="assets/images/shop/05.png" alt="" />
                                                                 </div>
                                                                 <div className="details">
-                                                                    <a href="/shop-details">
+                                                                    <Link href="/shop-details">
                                                                         <h5 className="title">
                                                                             Foster Farms Breast Nuggets Shaped Chicken
                                                                         </h5>
-                                                                    </a>
+                                                                    </Link>
                                                                     <div className="number">
                                                                         1 <i className="fa-regular fa-x" />
                                                                         <span>$36.00</span>
@@ -491,11 +492,11 @@ function HeaderThree() {
                                                                     <img src="assets/images/shop/04.png" alt="" />
                                                                 </div>
                                                                 <div className="details">
-                                                                    <a href="/shop-details">
+                                                                    <Link href="/shop-details">
                                                                         <h5 className="title">
                                                                             Foster Farms Breast Nuggets Shaped Chicken
                                                                         </h5>
-                                                                    </a>
+                                                                    </Link>
                                                                     <div className="number">
                                                                         1 <i className="fa-regular fa-x" />
                                                                         <span>$36.00</span>
@@ -530,19 +531,19 @@ function HeaderThree() {
                                                                 </p>
                                                             </div>
                                                             <div className="button-wrapper d-flex align-items-center justify-content-between">
-                                                                <a href="/cart" className="rts-btn btn-primary ">
+                                                                <Link href="/cart" className="rts-btn btn-primary ">
                                                                     View Cart
-                                                                </a>
-                                                                <a
+                                                                </Link>
+                                                                <Link
                                                                     href="/checkout"
                                                                     className="rts-btn btn-primary border-only"
                                                                 >
                                                                     CheckOut
-                                                                </a>
+                                                                </Link>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <a href="/cart" className="over_link" />
+                                                    <Link href="/cart" className="over_link" />
                                                 </div>
                                             </div>
                                             <div className="actions-area">

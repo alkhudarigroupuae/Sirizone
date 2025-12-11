@@ -10,6 +10,7 @@ import BackToTop from "@/components/common/BackToTop";
 import Sidebar from './Sidebar';
 import { useCompare } from '@/components/header/CompareContext'; 
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 function HeaderOne() {
 
@@ -225,13 +226,13 @@ function HeaderOne() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="logo-search-category-wrapper">
-                                    <a href="/" className="logo-area">
+                                    <Link href="/" className="logo-area">
                                         <img
                                             src="/assets/images/logo/logo-01.svg"
                                             alt="logo-main"
                                             className="logo"
                                         />
-                                    </a>
+                                    </Link>
                                     <div className="category-search-wrapper">
                                         <div className="location-area">
                                             <div className="icon">
@@ -296,10 +297,10 @@ function HeaderOne() {
                                             <i className="fa-light fa-user" />
                                             Account
                                         </a>
-                                         <a href="/shop-compare" className="btn-border-only account compare-number">
+                                         <Link href="/shop-compare" className="btn-border-only account compare-number">
                                             <i className="fa-regular fa-code-compare"></i>
                                             <span className="number">{compareItems.length}</span>
-                                         </a>
+                                         </Link>
                                         <WishList />
                                         <Cart />
                                     </div>

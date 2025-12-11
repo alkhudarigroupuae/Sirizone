@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 const AccountTabs = () => {
@@ -42,9 +43,9 @@ const AccountTabs = () => {
                 <i className="fa-regular fa-user"></i> Account Details
               </button>
               <button className="nav-link">
-                <a href="/login">
+                <Link href="/login">
                   <i className="fa-light fa-right-from-bracket"></i> Log Out
-                </a>
+                </Link>
               </button>
             </div>
           </div>
@@ -54,7 +55,7 @@ const AccountTabs = () => {
               {activeTab === 'dashboard' && (
                 <div className="dashboard-account-area">
                   <h2 className="title">
-                    Hello Raisa! (Not Raisa?) <a href="/login">Log Out.</a>
+                    Hello Raisa! (Not Raisa?) <Link href="/login">Log Out.</Link>
                   </h2>
                   <p className="disc">
                     From your account dashboard you can view your recent orders,

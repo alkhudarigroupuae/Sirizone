@@ -7,6 +7,7 @@ import Product from '@/data/Product.json';
 
 
 import FooterOne from "@/components/footer/FooterOne";
+import Link from "next/link";
 
 
 interface PostType {
@@ -52,7 +53,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-12">
               <div className="navigator-breadcrumb-wrapper">
-                <a href="/">Home</a>
+                <Link href="/">Home</Link>
                 <i className="fa-regular fa-chevron-right" />
                 <a className="current" href="#">
                   Shop
@@ -67,11 +68,6 @@ export default function Home() {
           <hr className="section-seperator" />
         </div>
       </div>
-
-
-
-
-
       <>
         {/* shop[ grid sidebar wrapper */}
         <div className="shop-grid-sidebar-area rts-section-gap">

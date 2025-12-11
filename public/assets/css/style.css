@@ -18601,7 +18601,6 @@ li.with-megamenu:hover .rts-megamenu {
 
 .single-shopping-card-one .cart-counter-action .quantity-edit input {
   padding: 0;
-  max-width: 10px;
   font-weight: 600;
 }
 
@@ -22430,7 +22429,6 @@ body.modal-open {
 .filter-select-area {
   background: #F3F4F6;
   border-radius: 6px;
-  margin-left: -30px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
@@ -22548,6 +22546,18 @@ body.modal-open {
 
 .nice-select-area-wrapper-and-button .nice-select-wrapper-1 .single-select {
   width: 230px;
+  position: relative;
+  z-index: 1;
+}
+.nice-select-area-wrapper-and-button .nice-select-wrapper-1 .single-select::after{
+  content: '\f078';
+  position: absolute;
+  z-index: 1;
+  font-family: "Font Awesome 6 Pro";
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
@@ -22604,7 +22614,6 @@ body.modal-open {
 }
 
 .product-area-wrapper-shopgrid-list {
-  margin-left: -30px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
@@ -23138,7 +23147,20 @@ body.modal-open {
   background: #fff;
   padding: 15px;
 }
+.single-select{
+  position: relative;
+  z-index: 1;
+}
+.contact-form-1 .single-select::after{
+  content: '\f078';
+  position: absolute;
+  z-index: 1;
+  font-family: "Font Awesome 6 Pro";
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
 
+}
 .contact-form-1 .contact-form-wrapper--half-area {
   display: flex;
   align-items: center;
@@ -24936,7 +24958,6 @@ body.modal-open {
   padding: 30px;
   border-radius: 6px;
   border: 1px solid #E2E2E2;
-  margin-left: -30px;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -24998,7 +25019,6 @@ body.modal-open {
   position: relative;
   border-radius: 6px;
   margin-top: 30px;
-  margin-left: -30px;
   background-image: url(/assets/images/vendor/02.jpg);
 }
 
@@ -25087,9 +25107,6 @@ body.modal-open {
   transform: translateY(-50%);
 }
 
-.ml-v-dec-m {
-  margin-left: -30px;
-}
 
 @media only screen and (max-width: 1199px) {
   .ml-v-dec-m {
@@ -28693,12 +28710,13 @@ ul.submenu.mm-collapse.mm-show {
   user-select: none;
   white-space: nowrap;
   width: 230px;
-  height: 35px;
+  height: 40px;
   display: flex;
   align-items: center;
   font-weight: 600;
   color: #2C3C28;
   -webkit-color: #2C3C28;
+  padding: 0 20px !important;
 }
 
 .wishlist-page .bottom-cupon-code-cart-area {
@@ -28778,6 +28796,8 @@ form.contact-form-1 .single-select select {
   border: 1px solid #E2E2E2;
   background: #fff;
   padding: 15px;
+  appearance: none;
+  position: relative;
 }
 
 select {
@@ -28786,8 +28806,8 @@ select {
   border: 1px solid #E2E2E2;
   background: #fff;
   padding: 15px;
+  appearance: none;
 }
-
 li.has-dropdown .submenu li>a .badge {
   color: var(--color-primary) !important;
 }

@@ -9,6 +9,7 @@ import TestimonilsOne from "@/components/testimonials/TestimonilsOne";
 import ShortService from "@/components/service/ShortService";
 
 import FooterOne from "@/components/footer/FooterOne";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -73,7 +74,7 @@ export default function Home() {
                   </a>
                 </div>
                 <p>
-                  Don't have Acocut? <a href="/register">Registration</a>
+                  Don't have Acocut? <Link href="/register">Registration</Link>
                 </p>
               </div>
             </form>

@@ -34,19 +34,19 @@ const MyComponent = () => {
       </div>
       <div className="row g-24">
         {selectedPosts.map((post: PostType, index: number) => (
-                                        <div
-                                            key={index}
-                                            className="col-lg-4 col-md-6 col-sm-12"
-                                        >
-                                            <div className="single-blog-area-start style-two">
-                                                <BlogTwoMain
-                                                    Slug={post.slug}
-                                                    blogImage={post.image}
-                                                    blogTitle={post.title}
-                                                />
-                                            </div>
-                                        </div>
-                                    ))}
+            <div
+                key={index}
+                className="col-lg-4 col-md-6 col-sm-12"
+            >
+                <div className="single-blog-area-start style-two">
+                    <BlogTwoMain
+                        Slug={post.slug}
+                        blogImage={post.image}
+                        blogTitle={post.title}
+                    />
+                </div>
+            </div>
+        ))}
       </div>
     </div>
   </div>

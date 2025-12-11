@@ -1,15 +1,12 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useCart } from "@/components/header/CartContext";
 import { useCompare } from '@/components/header/CompareContext';
 import { useWishlist } from "@/components/header/WishlistContext";
 import ProductDetails from "@/components/modal/ProductDetails";
 
-
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
 
 
 interface BlogGridMainProps {
@@ -26,72 +23,29 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
     Price,
 }) => {
 
-
     type ModalType = 'one' | 'two' | 'three' | null;
     const [activeModal, setActiveModal] = useState<ModalType>(null);
     const handleClose = () => setActiveModal(null);
 
-
-
-    // number count up and down
-    useEffect(() => {
-        const handleQuantityClick = (e: Event) => {
-            const button = e.currentTarget as HTMLElement;
-            const parent = button.closest('.quantity-edit') as HTMLElement | null;
-            if (!parent) return;
-
-            const input = parent.querySelector('.input') as HTMLInputElement | null;
-            const addToCart = parent.querySelector('a.add-to-cart') as HTMLElement | null;
-            if (!input) return;
-
-            let oldValue = parseInt(input.value || '1', 10);
-            let newVal = oldValue;
-
-            if (button.classList.contains('plus')) {
-                newVal = oldValue + 1;
-            } else if (button.classList.contains('minus')) {
-                newVal = oldValue > 1 ? oldValue - 1 : 1;
-            }
-
-            input.value = newVal.toString();
-            if (addToCart) {
-                addToCart.setAttribute('data-quantity', newVal.toString());
-            }
-        };
-
-        const buttons = document.querySelectorAll('.quantity-edit .button');
-
-        // 💡 Remove any existing handlers first (safe rebind)
-        buttons.forEach(button => {
-            button.removeEventListener('click', handleQuantityClick);
-            button.addEventListener('click', handleQuantityClick);
-        });
-
-        return () => {
-            buttons.forEach(button => {
-                button.removeEventListener('click', handleQuantityClick);
-            });
-        };
-    }, []);
-
-
+    // ✅ FIXED QUANTITY (React Safe)
+    const [quantity, setQuantity] = useState(1);
+    const increment = () => setQuantity(q => q + 1);
+    const decrement = () => setQuantity(q => (q > 1 ? q - 1 : 1));
 
 
     // cart item
-    const { addToCart } = useCart(); // Now works
+    const { addToCart } = useCart();
 
     const handleAdd = () => {
         addToCart({
-            id: Date.now(), // unique ID
+            id: Date.now(),
             image: `/assets/images/grocery/${ProductImage}`,
             title: ProductTitle ?? 'Default Product Title',
             price: parseFloat(Price ?? '0'),
-            quantity: 1,
+            quantity: quantity, // 👉 FIXED
             active: true,
         });
     };
-
-
 
 
     const { addToCompare } = useCompare();
@@ -100,14 +54,13 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
             image: `/assets/images/grocery/${ProductImage}`,
             name: ProductTitle ?? 'Default Product Title',
             price: Price ?? '0',
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', // Or dynamic if available
-            rating: 5, // Static or dynamic value
-            ratingCount: 25, // You can replace this
-            weight: '500g', // If you have dynamic, replace it
-            inStock: true, // Or false
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            rating: 5,
+            ratingCount: 25,
+            weight: '500g',
+            inStock: true,
         });
     };
-
 
 
     const { addToWishlist } = useWishlist();
@@ -166,13 +119,14 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                     <span
                         className="single-action openuptip cta-quickview product-details-popup-btn"
                         data-flow="up"
-                        title="Quick View" onClick={() => setActiveModal('two')}
+                        title="Quick View"
+                        onClick={() => setActiveModal('two')}
                     >
                         <i className="fa-regular fa-eye" />
                     </span>
                 </div>
             </div>
-            {/* iamge and sction area start */}
+
             <div className="body-content">
                 <a href={`/shop/${Slug}`}>
                     <h4 className="title">
@@ -184,24 +138,37 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                     <span className="current">{`$${Price}`}</span>
                     <div className="previous">$36.00</div>
                 </div>
+
                 <div className="cart-counter-action">
+                    {/* ✅ FIXED QUANTITY SYSTEM */}
                     <div className="quantity-edit">
-                        <input type="text" className="input" defaultValue={1} />
+                        <input
+                            type="text"
+                            className="input"
+                            value={quantity}
+                            readOnly
+                        />
+
                         <div className="button-wrapper-action">
-                            <button className="button minus">
+                            <button className="button minus" onClick={decrement}>
                                 <i className="fa-regular fa-chevron-down" />
                             </button>
-                            <button className="button plus">
+
+                            <button className="button plus" onClick={increment}>
                                 +<i className="fa-regular fa-chevron-up" />
                             </button>
                         </div>
                     </div>
-                    <a href="#" className="rts-btn btn-primary radious-sm with-icon"
+
+                    <a
+                        href="#"
+                        className="rts-btn btn-primary radious-sm with-icon"
                         onClick={e => {
                             e.preventDefault();
                             handleAdd();
                             addcart();
-                        }}>
+                        }}
+                    >
                         <div className="btn-text">Add</div>
                         <div className="arrow-icon">
                             <i className="fa-regular fa-cart-shopping" />
@@ -212,6 +179,7 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                     </a>
                 </div>
             </div>
+
             <ProductDetails
                 show={activeModal === 'two'}
                 handleClose={handleClose}

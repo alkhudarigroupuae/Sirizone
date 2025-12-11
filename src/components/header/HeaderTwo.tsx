@@ -9,6 +9,7 @@ import BackToTop from "@/components/common/BackToTop";
 import Sidebar from './Sidebar';
 import { useCompare } from '@/components/header/CompareContext'; 
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 function HeaderTwo() {
 const { compareItems } = useCompare();
@@ -140,16 +141,16 @@ const { compareItems } = useCompare();
                                         <p>Welcome to our Organic store EkoMart!</p>
                                         <ul className="nav-header-top">
                                             <li>
-                                                <a href="/trackorder">Track Order</a>
+                                                <Link href="/trackorder">Track Order</Link>
                                             </li>
                                             <li>
-                                                <a href="/about">About Us</a>
+                                                <Link href="/about">About Us</Link>
                                             </li>
                                             <li>
-                                                <a href="/contact">Contact</a>
+                                                <Link href="/contact">Contact</Link>
                                             </li>
                                             <li>
-                                                <a href="/faq">FAQ</a>
+                                                <Link href="/faq">FAQ</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -229,14 +230,14 @@ const { compareItems } = useCompare();
                                         </form>
                                         </div>
                                         <div className="accont-wishlist-cart-area-header">
-                                            <a href="account.html" className="btn-border-only account">
+                                            <Link href="/account" className="btn-border-only account">
                                                 <i className="fa-light fa-user" />
                                                 Account
-                                            </a>
-                                             <a href="/shop-compare" className="btn-border-only account compare-number">
+                                            </Link>
+                                             <Link href="/shop-compare" className="btn-border-only account compare-number">
                                                 <i className="fa-regular fa-code-compare"></i>
                                                 <span className="number">{compareItems.length}</span>
-                                            </a>
+                                            </Link>
                                             <WishList/>
                                             <Cart />
                                         </div>
@@ -263,13 +264,13 @@ const { compareItems } = useCompare();
                                         {/* button-area end */}
                                     </div>
                                     <div className="logo-search-category-wrapper">
-                                        <a href="/" className="logo-area">
+                                        <Link href="/" className="logo-area">
                                             <img
                                                 src="assets/images/logo/logo-01.svg"
                                                 alt="logo-main"
                                                 className="logo"
                                             />
-                                        </a>
+                                        </Link>
                                         <div className="category-search-wrapper">
                                             <div className="category-btn category-hover-header">
                                                 <img
