@@ -4,8 +4,7 @@ import React, { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, PaymentElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { STRIPE_PUBLIC_KEY, createStripePayment } from '@/lib/payment';
-
-const stripePromise = loadStripe(STRIPE_PUBLIC_KEY);
+const stripePromise = STRIPE_PUBLIC_KEY ? loadStripe(STRIPE_PUBLIC_KEY) : null;
 
 function CheckoutForm({ amount, onSuccess }: { amount: number; onSuccess: () => void }) {
   const stripe = useStripe();
@@ -103,6 +102,14 @@ export default function StripePayment({
         <div className="spinner-border text-primary" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>
+      </div>
+    );
+  }
+
+  if (!stripePromise) {
+    return (
+      <div className="alert alert-warning">
+        Stripe غير مهيأ حالياً. الرجاء إضافة المفاتيح أو استخدام خيار الدفع التجريبي.
       </div>
     );
   }
