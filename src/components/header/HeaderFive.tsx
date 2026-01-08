@@ -145,7 +145,7 @@ function HeaderFive() {
                       <a href="#">Wishlist</a>
                       <a href="#">Order Tracking</a>
                     </div>
-                    <p>Welcome to our Organic store EkoMart!</p>
+                    <p>Welcome to Sirizone Marketplace!</p>
                     <div className="follow-us-social">
                       <span>Follow Us:</span>
                       <div className="social">
@@ -179,8 +179,8 @@ function HeaderFive() {
                           <div className="logo-search-category-wrapper style-five-call-us">
                             <a href="/" className="logo-area">
                               <img
-                                src="assets/images/logo/logo-01.svg"
-                                alt="logo-main"
+                                src="assets/images/logo/logo.png"
+                                alt="Sirizone Logo"
                                 className="logo"
                               />
                             </a>
@@ -304,8 +304,8 @@ function HeaderFive() {
                   <div className="logo-search-category-wrapper after-md-device-header header-mid-five-call">
                     <a href="/" className="logo-area">
                       <img
-                        src="assets/images/logo/logo-01.svg"
-                        alt="logo-main"
+                        src="assets/images/logo/logo.png"
+                        alt="Sirizone Logo"
                         className="logo"
                       />
                     </a>

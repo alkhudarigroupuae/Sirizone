@@ -228,8 +228,8 @@ function HeaderOne() {
                                 <div className="logo-search-category-wrapper">
                                     <Link href="/" className="logo-area">
                                         <img
-                                            src="/assets/images/logo/logo-01.svg"
-                                            alt="logo-main"
+                                            src="/assets/images/logo/logo.png"
+                                            alt="Sirizone Logo"
                                             className="logo"
                                         />
                                     </Link>
@@ -335,8 +335,8 @@ function HeaderOne() {
                                 <div className="logo-search-category-wrapper">
                                     <a href="index.html" className="logo-area">
                                         <img
-                                            src="/assets/images/logo/logo-01.svg"
-                                            alt="logo-main"
+                                            src="/assets/images/logo/logo.png"
+                                            alt="Sirizone Logo"
                                             className="logo"
                                         />
                                     </a>

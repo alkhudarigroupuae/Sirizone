@@ -1,37 +1,36 @@
-import BannerOne from "@/components/banner/BannerOne";
-import FeatureOne from "@/components/feature/FeatureOne";
-import HeaderOne from "@/components/header/HeaderOne";
-import DiscountProduct from "@/components/product/DiscountProduct";
-import FeatureProduct from "@/components/product/FeatureProduct";
-import WeeklyBestSelling from "@/components/product/WeeklyBestSelling";
-import FeatureDiscount from "@/components/product/FeatureDiscount";
-import TrandingProduct from "@/components/product/TrandingProduct";
-import BlogOne from "@/components/blog/BlogOne";
-import FooterOne from "@/components/footer/FooterOne";
+import HeaderFive from "@/components/header/HeaderFive";
+import BannerFive from "@/components/banner/BannerFive";
+import BlogFive from "@/components/blog/BlogFive";
+import FooterThree from "@/components/footer/FooterThree";
+import FeatureCategory from '@/components/feature/FeatureCategory';
+import BestDiscount from '@/components/product/BestDiscount';
+import BestSellingWrap from '@/components/product/BestSellingWrap';
+import RecentlyAddedTwo from "@/components/product/RecentlyAddedTwo";
+import ShortService from "@/components/service/ShortService";
+import BackToTop from "@/components/common/BackToTop";
 import { CartProvider } from "@/components/header/CartContext";
 import { WishlistProvider } from "@/components/header/WishlistContext";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 
 export default function Home() {
   return (
     <WishlistProvider>
       <CartProvider>
-        <div className="demo-one">
-          
-        <ToastContainer position="top-right" autoClose={3000} />
-          <HeaderOne />
-          <BannerOne />
-          <FeatureOne />
-          <FeatureProduct />
-          <DiscountProduct />
-          <WeeklyBestSelling />
-          <FeatureDiscount />
-          <TrandingProduct />
-          <BlogOne />
-          <FooterOne />
+        <div className="index-five">
+          <ToastContainer position="top-right" autoClose={3000} />
+          <HeaderFive />
+          <BannerFive />
+          <FeatureCategory />
+          <BestDiscount />
+          <BestSellingWrap />
+          <RecentlyAddedTwo />
+          <BlogFive />
+          <ShortService />
+          <FooterThree />
+          <BackToTop />
         </div>
       </CartProvider>
-      </WishlistProvider>
+    </WishlistProvider>
   );
 }

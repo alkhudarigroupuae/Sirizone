@@ -138,7 +138,7 @@ const { compareItems } = useCompare();
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="hader-top-between-two">
-                                        <p>Welcome to our Organic store EkoMart!</p>
+                                        <p>Welcome to Sirizone Marketplace!</p>
                                         <ul className="nav-header-top">
                                             <li>
                                                 <Link href="/trackorder">Track Order</Link>
@@ -165,7 +165,7 @@ const { compareItems } = useCompare();
                                     <div className="logo-search-category-wrapper">
                                         <a href="/" className="logo-area">
                                             <img
-                                                src="assets/images/logo/logo-02.svg"
+                                                src="assets/images/logo/logo.png"
                                                 alt="logo-main"
                                                 className="logo"
                                             />
@@ -266,7 +266,7 @@ const { compareItems } = useCompare();
                                     <div className="logo-search-category-wrapper">
                                         <Link href="/" className="logo-area">
                                             <img
-                                                src="assets/images/logo/logo-01.svg"
+                                                src="assets/images/logo/logo.png"
                                                 alt="logo-main"
                                                 className="logo"
                                             />
