@@ -6,25 +6,42 @@ export default function DarkModeToggle() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Check saved preference
+    // Initialize from saved preference or OS preference
     const savedMode = localStorage.getItem('darkMode');
-    if (savedMode === 'true') {
-      setIsDark(true);
-      document.documentElement.classList.add('dark-mode');
-    }
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const shouldBeDark = savedMode === 'true' || (savedMode === null && prefersDark);
+    applyMode(shouldBeDark);
+    setIsDark(shouldBeDark);
+
+    // Keep in sync with OS changes
+    const listener = (e: MediaQueryListEvent) => {
+      if (savedMode === null) {
+        applyMode(e.matches);
+        setIsDark(e.matches);
+      }
+    };
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', listener);
+    return () => window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', listener);
   }, []);
+
+  const applyMode = (dark: boolean) => {
+    const root = document.documentElement;
+    if (dark) {
+      root.classList.add('dark-mode');
+      root.dataset.theme = 'dark';
+      document.body.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+      root.dataset.theme = 'light';
+      document.body.classList.remove('dark-mode');
+    }
+  };
 
   const toggleDarkMode = () => {
     const newMode = !isDark;
     setIsDark(newMode);
-    
-    if (newMode) {
-      document.documentElement.classList.add('dark-mode');
-      localStorage.setItem('darkMode', 'true');
-    } else {
-      document.documentElement.classList.remove('dark-mode');
-      localStorage.setItem('darkMode', 'false');
-    }
+    applyMode(newMode);
+    localStorage.setItem('darkMode', newMode ? 'true' : 'false');
   };
 
   return (
