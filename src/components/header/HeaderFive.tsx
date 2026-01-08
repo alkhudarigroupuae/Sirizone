@@ -190,9 +190,9 @@ function HeaderFive() {
                                   <i className="fa-regular fa-phone-volume" />
                                 </div>
                                 <div className="information">
-                                  <span>Hotline Number</span>
+                                  <span>Hotline</span>
                                   <a href="#">
-                                    <p>+259 2158 2316</p>
+                                    <p>Free Call</p>
                                   </a>
                                 </div>
                               </div>
