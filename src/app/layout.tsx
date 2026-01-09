@@ -9,7 +9,6 @@ import { WishlistProvider } from "../components/header/WishlistContext";
 import { CompareProvider } from "../components/header/CompareContext";
 
 import AIChatWidget from "../components/common/AIChatWidget";
-import DarkModeToggle from "../components/common/DarkModeToggle";
 import { TranslationProvider } from "../contexts/TranslationContext";
 
 const geistSans = Geist({
@@ -101,7 +100,6 @@ export default function RootLayout({
             <WishlistProvider>
               <CartProvider>
                 {children}
-                <DarkModeToggle />
                 <Analytics />
               </CartProvider>
             </WishlistProvider>
