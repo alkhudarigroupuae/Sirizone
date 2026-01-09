@@ -98,11 +98,11 @@ const WeeklyBestSelling: React.FC = () => {
                                             <div className="col-lg-12">
                                                 {activeTab === 'tab1' &&
                                                     <div>
-                                                        <div className="row g-4">
+                                                        <div className="row g-4 row-cols-lg-5">
                                                             {postsSection1.map((post: PostType, index: number) => (
                                                                 <div
                                                                     key={index}
-                                                                    className="col-xxl-2 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12"
+                                                                    className="col-xxl-2 col-lg col-md-4 col-sm-6 col-12"
                                                                 >
                                                                     <div className="single-shopping-card-one">
                                                                         <WeeklyBestSellingMain
@@ -118,11 +118,11 @@ const WeeklyBestSelling: React.FC = () => {
 
                                                     </div>}
                                                 {activeTab === 'tab2' && <div>
-                                                    <div className="row g-4">
+                                                    <div className="row g-4 row-cols-lg-5">
                                                         {postsSection2.map((post: PostType, index: number) => (
                                                             <div
                                                                 key={index}
-                                                                className="col-xxl-2 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12"
+                                                                className="col-xxl-2 col-lg col-md-4 col-sm-6 col-12"
                                                             >
                                                                 <div className="single-shopping-card-one">
                                                                     <WeeklyBestSellingMain
@@ -137,12 +137,12 @@ const WeeklyBestSelling: React.FC = () => {
                                                     </div>
                                                 </div>}
                                                 {activeTab === 'tab3' && <div>
-                                                    <div className="row g-4">
+                                                    <div className="row g-4 row-cols-lg-5">
 
                                                         {postsSection3.map((post: PostType, index: number) => (
                                                             <div
                                                                 key={index}
-                                                                className="col-xxl-2 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12"
+                                                                className="col-xxl-2 col-lg col-md-4 col-sm-6 col-12"
                                                             >
                                                                 <div className="single-shopping-card-one">
                                                                     <WeeklyBestSellingMain
@@ -158,11 +158,11 @@ const WeeklyBestSelling: React.FC = () => {
                                                     </div>
                                                 </div>}
                                                 {activeTab === 'tab4' && <div>
-                                                    <div className="row g-4">
+                                                    <div className="row g-4 row-cols-lg-5">
                                                         {postsSection4.map((post: PostType, index: number) => (
                                                             <div
                                                                 key={index}
-                                                                className="col-xxl-2 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12"
+                                                                className="col-xxl-2 col-lg col-md-4 col-sm-6 col-12"
                                                             >
                                                                 <div className="single-shopping-card-one">
                                                                     <WeeklyBestSellingMain

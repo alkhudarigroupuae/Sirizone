@@ -99,21 +99,21 @@ export default function DarkModeToggle() {
 
         /* Dark Mode Styles */
         :global(.dark-mode) {
-          background-color: #1a1a1a !important;
+          background-color: #000000 !important;
           color: #e0e0e0 !important;
         }
 
         :global(.dark-mode) body {
-          background-color: #1a1a1a !important;
+          background-color: #000000 !important;
           color: #e0e0e0 !important;
         }
 
         :global(.dark-mode) .card,
         :global(.dark-mode) .product-area-wrapper,
         :global(.dark-mode) .single-shopping-card-one {
-          background-color: #2d2d2d !important;
+          background-color: #121212 !important;
           color: #e0e0e0 !important;
-          border-color: #404040 !important;
+          border-color: #333333 !important;
         }
 
         :global(.dark-mode) h1,
@@ -129,7 +129,7 @@ export default function DarkModeToggle() {
         :global(.dark-mode) p,
         :global(.dark-mode) span,
         :global(.dark-mode) .disc {
-          color: #c0c0c0 !important;
+          color: #cccccc !important;
         }
 
         :global(.dark-mode) .header-one,
@@ -138,16 +138,16 @@ export default function DarkModeToggle() {
         :global(.dark-mode) .header-four,
         :global(.dark-mode) .header-five,
         :global(.dark-mode) header {
-          background-color: #242424 !important;
-          border-bottom: 1px solid #404040 !important;
+          background-color: #0a0a0a !important;
+          border-bottom: 1px solid #333333 !important;
         }
 
         :global(.dark-mode) .footer-one,
         :global(.dark-mode) .footer-two,
         :global(.dark-mode) .footer-three,
         :global(.dark-mode) footer {
-          background-color: #1f1f1f !important;
-          border-top: 1px solid #404040 !important;
+          background-color: #050505 !important;
+          border-top: 1px solid #333333 !important;
         }
 
         :global(.dark-mode) .footer-one .title,
@@ -170,15 +170,15 @@ export default function DarkModeToggle() {
 
         :global(.dark-mode) .bg_light-1,
         :global(.dark-mode) .bg-light {
-          background-color: #252525 !important;
+          background-color: #000000 !important;
         }
 
         :global(.dark-mode) input,
         :global(.dark-mode) textarea,
         :global(.dark-mode) select {
-          background-color: #333333 !important;
-          color: #e0e0e0 !important;
-          border-color: #505050 !important;
+          background-color: #1a1a1a !important;
+          color: #ffffff !important;
+          border-color: #333333 !important;
         }
 
         :global(.dark-mode) input::placeholder,
@@ -208,7 +208,7 @@ export default function DarkModeToggle() {
 
         :global(.dark-mode) .border,
         :global(.dark-mode) hr {
-          border-color: #404040 !important;
+          border-color: #333333 !important;
         }
 
         :global(.dark-mode) .text-muted {
@@ -216,24 +216,24 @@ export default function DarkModeToggle() {
         }
 
         :global(.dark-mode) .badge {
-          background-color: #3d3d3d !important;
+          background-color: #333333 !important;
           color: #ffffff !important;
         }
 
         :global(.dark-mode) .alert {
-          background-color: #2d2d2d !important;
-          border-color: #404040 !important;
+          background-color: #121212 !important;
+          border-color: #333333 !important;
           color: #e0e0e0 !important;
         }
 
         :global(.dark-mode) .modal-content {
-          background-color: #2d2d2d !important;
+          background-color: #121212 !important;
           color: #e0e0e0 !important;
         }
 
         :global(.dark-mode) .dropdown-menu {
-          background-color: #2d2d2d !important;
-          border-color: #404040 !important;
+          background-color: #121212 !important;
+          border-color: #333333 !important;
         }
 
         :global(.dark-mode) .dropdown-item {
@@ -241,7 +241,7 @@ export default function DarkModeToggle() {
         }
 
         :global(.dark-mode) .dropdown-item:hover {
-          background-color: #3d3d3d !important;
+          background-color: #2a2a2a !important;
           color: #ff751f !important;
         }
       `}</style>

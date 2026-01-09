@@ -6,7 +6,7 @@ function BannerFive() {
     <div>
       <>
   {/* rts banner areaas tart */}
-  <div className="rts-banner-area rts-section-gap pt_sm--20">
+  <div className="rts-banner-area rts-section-gapTop pb--0 pt_sm--20">
     <div className="container">
       <div className="row g-5 g-sm-4">
         <div className="col-lg-9">

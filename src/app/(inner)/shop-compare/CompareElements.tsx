@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useCompare } from "@/components/header/CompareContext";
 import { useCart } from "@/components/header/CartContext";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const CompareElements = () => {
@@ -147,7 +147,6 @@ const CompareElements = () => {
                     ))}
                 </div>
             </div>
-            <ToastContainer />
         </div>
     );
 };

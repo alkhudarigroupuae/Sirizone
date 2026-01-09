@@ -165,7 +165,7 @@ const { compareItems } = useCompare();
                                     <div className="logo-search-category-wrapper">
                                         <a href="/" className="logo-area">
                                             <img
-                                                src="assets/images/logo/logo.png"
+                                                src="/assets/images/logo/logo-01.svg"
                                                 alt="logo-main"
                                                 className="logo"
                                             />
@@ -266,7 +266,7 @@ const { compareItems } = useCompare();
                                     <div className="logo-search-category-wrapper">
                                         <Link href="/" className="logo-area">
                                             <img
-                                                src="assets/images/logo/logo.png"
+                                                src="/assets/images/logo/logo-01.svg"
                                                 alt="logo-main"
                                                 className="logo"
                                             />

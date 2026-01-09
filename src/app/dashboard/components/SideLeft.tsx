@@ -12,11 +12,10 @@ function SideLeft({ collapsed }: SideLeftProps) {
   return (
     <div className={`sidebar_left ${collapsed ? 'collapsed' : ''}`}>
       <Link href="/dashboard" className="logo">
-        <Image
-          src="/assets/images-dashboard/logo/logo.svg"
+        <img
+          src="/assets/images/logo/logo-01.svg"
           alt="logo"
-          width={131}
-          height={32}
+          style={{ maxWidth: '100%', height: 'auto' }}
         />
       </Link>
       <SideMenu />

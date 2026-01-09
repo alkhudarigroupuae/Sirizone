@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useCart } from "@/components/header/CartContext";
 import { useWishlist } from "@/components/header/WishlistContext";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 interface BlogGridMainProps {
@@ -126,7 +126,6 @@ const BlogGridMain: React.FC<BlogGridMainProps> = ({
                     </Link>
                 </div>
 
-                <ToastContainer />
             </div>
         </>
     );

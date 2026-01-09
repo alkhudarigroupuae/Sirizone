@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 import { CartProvider } from "../components/header/CartContext";
 import { WishlistProvider } from "../components/header/WishlistContext";
 import { CompareProvider } from "../components/header/CompareContext";
 
-import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
 import AIChatWidget from "../components/common/AIChatWidget";
 import DarkModeToggle from "../components/common/DarkModeToggle";
 import { TranslationProvider } from "../contexts/TranslationContext";
@@ -24,12 +23,38 @@ const geistMono = Geist_Mono({
 });
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || '';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://sirizone.com';
+const SOCIAL_IMAGE = `${SITE_URL}/assets/images/logo/logo-01.svg`;
 
 export const metadata: Metadata = {
   title: "Sirizone - Marketplace Platform",
   description: "Welcome to Sirizone Marketplace - Your trusted online shopping destination",
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: SITE_URL,
+  },
   icons: {
-    icon: "/assets/images/fav.png",
+    icon: "/assets/images/logo/logo-01.svg",
+  },
+  openGraph: {
+    title: "Sirizone - Marketplace Platform",
+    description: "Welcome to Sirizone Marketplace - Your trusted online shopping destination",
+    siteName: "Sirizone",
+    url: SITE_URL,
+    images: [
+      {
+        url: SOCIAL_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Sirizone",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sirizone - Marketplace Platform",
+    description: "Welcome to Sirizone Marketplace - Your trusted online shopping destination",
+    images: [SOCIAL_IMAGE],
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
@@ -76,9 +101,8 @@ export default function RootLayout({
             <WishlistProvider>
               <CartProvider>
                 {children}
-                <ToastContainer position="top-right" autoClose={3000} />
-                <AIChatWidget />
                 <DarkModeToggle />
+                <Analytics />
               </CartProvider>
             </WishlistProvider>
           </CompareProvider>

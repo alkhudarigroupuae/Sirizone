@@ -13,14 +13,10 @@ const categories = [
     { img: '/assets/images/category/04.png', title: 'Organic Vegetable', items: '299 Items' },
     { img: '/assets/images/category/05.png', title: 'Organic Foods', items: '299 Items' },
     { img: '/assets/images/category/06.png', title: 'Primiun Vegetable', items: '299 Items' },
-    { img: '/assets/images/category/07.png', title: 'Organic Vegetable', items: '299 Items' },
-    { img: '/assets/images/category/08.png', title: 'Organic Vegetable', items: '299 Items' },
-    { img: '/assets/images/category/09.png', title: 'Organic Vegetable', items: '299 Items' },
-    { img: '/assets/images/category/10.png', title: 'Organic Vegetable', items: '299 Items' },
 ];
 const FeaturedCategories = () => {
     return (
-        <div className="rts-category-area rts-section-gap">
+        <div className="rts-category-area pt--10">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
@@ -51,7 +47,7 @@ const FeaturedCategories = () => {
                                                         loop={true}
                                                         speed={1000}
                                                         spaceBetween={15}
-                                                        slidesPerView={8}
+                                                        slidesPerView={6}
                                                         breakpoints={{
                                                             0: { slidesPerView: 1, spaceBetween: 15 },
                                                             340: { slidesPerView: 2, spaceBetween: 15 },
@@ -59,7 +55,6 @@ const FeaturedCategories = () => {
                                                             640: { slidesPerView: 4, spaceBetween: 15 },
                                                             840: { slidesPerView: 4, spaceBetween: 15 },
                                                             1140: { slidesPerView: 6, spaceBetween: 15 },
-                                                            1740: { slidesPerView: 8, spaceBetween: 15 },
                                                         }}
                                                     >
                                                         {categories.map((category, index) => (

@@ -46,7 +46,7 @@ export default function Home() {
             <div className="logo-area mb--0">
               <img
                 className="mb--10"
-                src="assets/images/logo/fav.png"
+                src="/assets/images/logo/logo-01.svg"
                 alt="logo"
               />
             </div>

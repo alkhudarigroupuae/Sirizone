@@ -18,7 +18,6 @@ export default function Home() {
     <WishlistProvider>
       <CartProvider>
         <div className="index-five">
-          <ToastContainer position="top-right" autoClose={3000} />
           <HeaderFive />
           <BannerFive />
           <FeatureCategory />

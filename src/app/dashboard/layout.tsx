@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     icons: {
         icon: [
             {
-                url: "/assets/images/fav.png",
+                url: "/assets/images/logo/logo-01.svg",
                 type: "image/x-icon",
             },
         ],

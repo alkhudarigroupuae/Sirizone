@@ -3,11 +3,11 @@ import React from 'react'
 function FooterThree() {
     return (
         <div>
-            <div className="rts-footer-area pt--80 bg_blue-footer">
+            <div className="rts-footer-area pt--30 bg_blue-footer">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className="footer-main-content-wrapper pb--70">
+                            <div className="footer-main-content-wrapper pb--30">
                                 {/* single footer area wrapper */}
                                 <div className="single-footer-wized">
                                     <h3 className="footer-title animated fadeIn">About Company</h3>

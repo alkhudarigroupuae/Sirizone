@@ -51,15 +51,15 @@ input[type="tel"],
 textarea {
     font-size: var(--font-size-b2);
     font-weight: 400;
-    height: auto;
-    line-height: 28px;
+    height: 36px;
+    line-height: 20px;
     background: transparent;
     -webkit-box-shadow: none;
     box-shadow: none;
-    padding: 0 15px;
+    padding: 0 10px;
     outline: none;
     border: var(--border-width) solid var(--color-border);
-    border-radius: var(--radius);
+    border-radius: 4px;
 
     /* -- Placeholder -- */
     &::placeholder {

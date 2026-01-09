@@ -78,7 +78,9 @@ export default function PaymentGateway({
         {selectedMethod === 'mock' && !hasRealGateway && (
           <MockPayment
             amount={amount}
-            onSuccess={(details) => onSuccess({ method: 'mock', ...details })}
+            onSuccess={(details: { id: string; amount: number; currency: string; status: string }) =>
+              onSuccess({ method: 'mock', ...details })
+            }
           />
         )}
       </div>
